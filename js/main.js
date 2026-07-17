@@ -5,69 +5,32 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---- Page Transitions & Loading Bar ----
-  // Inject top loading bar immediately
-  var loadBar = document.createElement('div');
-  loadBar.className = 'loading-bar';
-  document.body.appendChild(loadBar);
-  setTimeout(function() {
-    loadBar.style.width = '30%';
-  }, 10);
-
-  // Complete loading bar on window load
-  window.addEventListener('load', function() {
-    loadBar.style.width = '100%';
-    setTimeout(function() {
-      loadBar.style.opacity = '0';
-      setTimeout(function() {
-        loadBar.remove();
-      }, 400);
-    }, 200);
-  });
-
-  // Remove entry transition class
-  document.body.classList.remove('page-transition-in');
-
-  // Intercept navigation for smooth page exit transition
+  // Intercept navigation for smooth exit transition (instant, no delay)
   document.querySelectorAll('a').forEach(function (link) {
     var href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('javascript:') || link.getAttribute('target') === '_blank') {
       return;
     }
-    
-    // Check if this is an internal link (e.g., ends with .html, or is a relative link)
     if (href.endsWith('.html') || (href.startsWith('/') && !href.startsWith('//')) || (!href.includes(':') && !href.includes('//'))) {
       link.addEventListener('click', function (e) {
-        // Skip mailto and tel links
         if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
-        
         e.preventDefault();
-        
-        // Show loading progress bar starting exit sequence
-        var exitBar = document.createElement('div');
-        exitBar.className = 'loading-bar';
-        document.body.appendChild(exitBar);
-        setTimeout(function() {
-          exitBar.style.width = '70%';
-        }, 10);
-
         document.body.classList.add('page-transition-out');
-        setTimeout(function () {
-          window.location.href = href;
-        }, 400); // Match CSS transition speed (0.4s)
+        // Navigate immediately — CSS opacity handles the fade
+        window.location.href = href;
       });
     }
   });
 
-  // ---- Scroll Effects (Navbar & Parallax) ----
-  const navbar = document.querySelector('.navbar');
-  const pageHeaders = document.querySelectorAll('.page-header');
-  const heroVideo = document.querySelector('.hero-video');
+  // ---- Throttled Scroll Effects (Navbar & Parallax) ----
+  var navbar = document.querySelector('.navbar');
+  var pageHeaders = document.querySelectorAll('.page-header');
+  var heroVideo = document.querySelector('.hero-video');
+  var scrollTicking = false;
 
   function handleScrollEffects() {
     var scrolled = window.scrollY;
     
-    // Navbar scrolled class
     if (navbar) {
       if (scrolled > 50) {
         navbar.classList.add('scrolled');
@@ -76,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-    // Page header parallax
     pageHeaders.forEach(function (header) {
       var limit = header.offsetTop + header.offsetHeight;
       if (scrolled <= limit) {
@@ -85,14 +47,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
     
-    // Hero video parallax
     if (heroVideo && scrolled < 800) {
       var yVideoPos = scrolled * 0.28;
       heroVideo.style.transform = 'translateY(' + yVideoPos + 'px)';
     }
+    scrollTicking = false;
   }
 
-  window.addEventListener('scroll', handleScrollEffects);
+  window.addEventListener('scroll', function() {
+    if (!scrollTicking) {
+      requestAnimationFrame(handleScrollEffects);
+      scrollTicking = true;
+    }
+  });
   handleScrollEffects();
 
   // ---- Active Nav Link ----
@@ -199,7 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  window.addEventListener('scroll', handleScrollTopBtn);
+  window.addEventListener('scroll', function() {
+    requestAnimationFrame(handleScrollTopBtn);
+  });
   handleScrollTopBtn();
 
   scrollTopBtn.addEventListener('click', function () {
