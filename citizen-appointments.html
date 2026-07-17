@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - Stackly</title>
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="page-transition-in">
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="sidebar-close" onclick="document.getElementById('sidebar').classList.remove('show');document.getElementById('sidebarOverlay').classList.remove('show');">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="sidebar-header">
+        <div class="sidebar-logo"><img src="images/logo.webp" alt="Stackly" class="brand-logo-img"></div>
+      </div>
+      <nav class="sidebar-menu">
+        <div class="sidebar-menu-label">Main</div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-applications.html"><i class="bi bi-file-earmark-text"></i> My Applications</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-certificates.html"><i class="bi bi-receipt"></i> Certificates</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-payments.html"><i class="bi bi-cash-stack"></i> Payments</a>
+        </div>
+        <div class="sidebar-menu-label">Services</div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-services.html"><i class="bi bi-grid-3x3-gap"></i> All Services</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-schemes.html"><i class="bi bi-gift"></i> Schemes</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-appointments.html" class="active"><i class="bi bi-calendar-check"></i> Appointments</a>
+        </div>
+        <div class="sidebar-menu-label">Account</div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-profile.html"><i class="bi bi-person"></i> My Profile</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-notifications.html"><i class="bi bi-bell"></i> Notifications <span class="badge bg-danger rounded-pill">3</span></a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="citizen-settings.html"><i class="bi bi-gear"></i> Settings</a>
+        </div>
+        <div class="sidebar-menu-item">
+          <a href="login.html" onclick="StacklyAuth.logout(); return false;"><i class="bi bi-box-arrow-left"></i> Logout</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dashboard-main">
+      <!-- Top Bar -->
+      <div class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="toggle-sidebar" onclick="document.getElementById('sidebar').classList.toggle('show');document.getElementById('sidebarOverlay').classList.toggle('show');">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="dashboard-search">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search services, applications...">
+          </div>
+        </div>
+        <div class="dashboard-topbar-right">
+          <div class="topbar-icon" data-bs-toggle="tooltip" title="Notifications">
+            <i class="bi bi-bell"></i>
+            <span class="notification-dot"></span>
+          </div>
+          <div class="topbar-icon" data-bs-toggle="tooltip" title="Messages">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <div class="topbar-user">
+            <div class="topbar-avatar"><img src="images/avatar_citizen.webp" alt="RS"></div>
+            <div class="d-none d-md-block">
+              <div id="topbar-email" style="font-size:0.85rem;font-weight:600;">Rahul Sharma</div>
+              <div id="topbar-role" style="font-size:0.7rem;color:var(--gray-500);">Citizen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        <!-- Header -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="mb-1">Appointments</h4>
+            <p class="text-muted" style="font-size:0.9rem;">Manage your government office appointments.</p>
+          </div>
+          <a href="#" class="btn btn-primary mt-2 mt-md-0"><i class="bi bi-plus-lg me-1"></i> Book New Appointment</a>
+        </div>
+
+        <!-- Upcoming Appointments -->
+        <h5 class="mb-3"><i class="bi bi-calendar-event text-primary me-2"></i>Upcoming Appointments</h5>
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6">
+            <div class="chart-card h-100">
+              <div class="chart-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <span class="table-status completed mb-2" style="background:#d4edda;color:#155724;">Confirmed</span>
+                    <h5 class="mt-2 mb-1">Caste Certificate Verification</h5>
+                    <p class="text-muted mb-0" style="font-size:0.85rem;">Revenue Department</p>
+                  </div>
+                  <div class="stat-card-icon bg-primary-light" style="width:48px;height:48px;border-radius:12px;font-size:1.1rem;"><i class="bi bi-calendar-check"></i></div>
+                </div>
+                <hr>
+                <div class="row g-3" style="font-size:0.85rem;">
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-calendar me-1"></i> Date</div>
+                    <strong>Jul 20, 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-clock me-1"></i> Time</div>
+                    <strong>10:30 AM</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-geo-alt me-1"></i> Location</div>
+                    <strong>Collector Office, Ward 12</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-person me-1"></i> Officer</div>
+                    <strong>Mr. Anil Deshmukh</strong>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-3">
+                  <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-danger">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="chart-card h-100">
+              <div class="chart-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <span class="table-status processing mb-2" style="background:#fff3cd;color:#856404;">Pending Confirmation</span>
+                    <h5 class="mt-2 mb-1">Passport Document Verification</h5>
+                    <p class="text-muted mb-0" style="font-size:0.85rem;">Passport Seva Kendra</p>
+                  </div>
+                  <div class="stat-card-icon bg-warning-light" style="width:48px;height:48px;border-radius:12px;font-size:1.1rem;"><i class="bi bi-calendar-check"></i></div>
+                </div>
+                <hr>
+                <div class="row g-3" style="font-size:0.85rem;">
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-calendar me-1"></i> Date</div>
+                    <strong>Jul 25, 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-clock me-1"></i> Time</div>
+                    <strong>2:00 PM</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-geo-alt me-1"></i> Location</div>
+                    <strong>PSK Andheri East, Mumbai</strong>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-muted mb-1"><i class="bi bi-person me-1"></i> Officer</div>
+                    <strong>Ms. Priya Kulkarni</strong>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-3">
+                  <a href="#" class="btn btn-sm btn-primary">View Details</a>
+                  <a href="#" class="btn btn-sm btn-outline-danger">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Past Appointments -->
+        <h5 class="mb-3"><i class="bi bi-clock-history text-primary me-2"></i>Past Appointments</h5>
+        <div class="chart-card">
+          <div class="chart-card-body p-0">
+            <div class="table-responsive">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Department</th>
+                    <th>Purpose</th>
+                    <th>Officer</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jul 10, 2026</td>
+                    <td>Revenue Department</td>
+                    <td>Birth Certificate Collection</td>
+                    <td>Mr. Anil Deshmukh</td>
+                    <td><span class="table-status completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Jun 28, 2026</td>
+                    <td>Municipal Corporation</td>
+                    <td>Property Tax Payment</td>
+                    <td>Mr. Ramesh Patil</td>
+                    <td><span class="table-status completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Jun 20, 2026</td>
+                    <td>Transport Department</td>
+                    <td>Driving License Test</td>
+                    <td>Ms. Sunita Jadhav</td>
+                    <td><span class="table-status completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Jun 12, 2026</td>
+                    <td>Education Department</td>
+                    <td>Scholarship Document Submit</td>
+                    <td>Mr. Vikram More</td>
+                    <td><span class="table-status completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Jun 05, 2026</td>
+                    <td>UIDAI Center</td>
+                    <td>Aadhaar Biometric Update</td>
+                    <td>Ms. Kavita Sharma</td>
+                    <td><span class="table-status completed">Completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    if (StacklyAuth.guard('citizen')) StacklyAuth.populateTopbar();
+  </script>
+</body>
+</html>

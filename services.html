@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="page-transition-in">
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -24,21 +24,20 @@
           <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
           <li class="nav-item"><a href="schemes.html" class="nav-link">Schemes</a></li>
-          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
           <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header" style="background-image: url('images/bg_services.webp');">
     <div class="container">
-      <h1>Our Services</h1>
-      <nav aria-label="breadcrumb">
+      <h1 class="hero-anim hero-anim-1">Our Services</h1>
+      <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Services</li>
@@ -173,7 +172,7 @@
             <h5>Hospital Registration</h5>
             <p>Register at government hospitals and book OPD appointments online.</p>
             <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Register Now <i class="bi bi-arrow-right"></i></a>
+              <a href="login.html" class="learn-more">Sign Up Now <i class="bi bi-arrow-right"></i></a>
               <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
             </div>
           </div>
@@ -251,6 +250,334 @@
     </div>
   </section>
 
+  <!-- Service Statistics -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-graph-up"></i> Service Metrics</span>
+        <h2>Service Performance Dashboard</h2>
+        <p>Real-time statistics on how our services are performing across the nation.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="svc-stat-card">
+            <div class="svc-stat-icon bg-primary-light"><i class="bi bi-file-earmark-check"></i></div>
+            <div class="svc-stat-number" data-count="42580" data-suffix="+">0</div>
+            <div class="svc-stat-label">Applications Processed</div>
+            <div class="svc-stat-trend up"><i class="bi bi-arrow-up-short"></i> 12% this month</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="svc-stat-card">
+            <div class="svc-stat-icon bg-success-light"><i class="bi bi-check-circle"></i></div>
+            <div class="svc-stat-number" data-count="98" data-suffix="%">0</div>
+            <div class="svc-stat-label">Completion Rate</div>
+            <div class="svc-stat-trend up"><i class="bi bi-arrow-up-short"></i> 3% improvement</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="svc-stat-card">
+            <div class="svc-stat-icon bg-info-light"><i class="bi bi-clock-history"></i></div>
+            <div class="svc-stat-number" data-count="3" data-suffix=".4 hrs">0</div>
+            <div class="svc-stat-label">Avg. Processing Time</div>
+            <div class="svc-stat-trend up"><i class="bi bi-arrow-down-short"></i> 20% faster</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="svc-stat-card">
+            <div class="svc-stat-icon bg-warning-light"><i class="bi bi-people"></i></div>
+            <div class="svc-stat-number" data-count="50240" data-suffix="+">0</div>
+            <div class="svc-stat-label">Active Users</div>
+            <div class="svc-stat-trend up"><i class="bi bi-arrow-up-short"></i> 8% this quarter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Services Spotlight -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-stars"></i> New Arrivals</span>
+        <h2>Recently Added Services</h2>
+        <p>Fresh services just launched on the platform to serve you better.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="new-service-card">
+            <div class="new-service-badge">NEW</div>
+            <div class="new-service-icon" style="background: linear-gradient(135deg, #2563EB, #3B82F6);">
+              <i class="bi bi-upc-scan"></i>
+            </div>
+            <div class="new-service-body">
+              <h5>Digital Ration Card</h5>
+              <p>Apply for or renew your ration card entirely online with Aadhaar-linked verification.</p>
+              <div class="new-service-meta">
+                <span><i class="bi bi-clock"></i> 2 Days</span>
+                <span><i class="bi bi-cash"></i> Free</span>
+                <span><i class="bi bi-building"></i> Food Dept.</span>
+              </div>
+              <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="new-service-card">
+            <div class="new-service-badge" style="background: var(--success);">NEW</div>
+            <div class="new-service-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+              <i class="bi bi-camera-reels"></i>
+            </div>
+            <div class="new-service-body">
+              <h5>Pollution Certificate Online</h5>
+              <p>Get your vehicle pollution under control (PUC) certificate renewed digitally.</p>
+              <div class="new-service-meta">
+                <span><i class="bi bi-clock"></i> Instant</span>
+                <span><i class="bi bi-cash"></i> Rs. 60</span>
+                <span><i class="bi bi-building"></i> Transport</span>
+              </div>
+              <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="new-service-card">
+            <div class="new-service-badge" style="background: var(--info);">COMING SOON</div>
+            <div class="new-service-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+              <i class="bi bi-passport"></i>
+            </div>
+            <div class="new-service-body">
+              <h5>Passport Renewal Online</h5>
+              <p>Renew your passport completely online with photo verification and delivery tracking.</p>
+              <div class="new-service-meta">
+                <span><i class="bi bi-clock"></i> 5 Days</span>
+                <span><i class="bi bi-cash"></i> Rs. 1500</span>
+                <span><i class="bi bi-building"></i> MEA</span>
+              </div>
+              <a href="#" class="btn btn-secondary btn-sm w-100 mt-3" disabled>Coming Soon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Service Walkthrough -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-lightning-charge"></i> Featured Service</span>
+        <h2>Aadhaar Card &mdash; Step by Step</h2>
+        <p>Our most popular service, simplified into 5 easy steps.</p>
+      </div>
+      <div class="walkthrough-wrapper fade-in">
+        <div class="walkthrough-steps">
+          <div class="walkthrough-step active">
+            <div class="walkthrough-step-number">1</div>
+            <div class="walkthrough-step-content">
+              <h5>Create Account</h5>
+              <p>Sign up with your mobile number and verify via OTP. Link your existing Aadhaar if available.</p>
+            </div>
+          </div>
+          <div class="walkthrough-step">
+            <div class="walkthrough-step-number">2</div>
+            <div class="walkthrough-step-content">
+              <h5>Fill Application</h5>
+              <p>Complete the online form with personal details, address, and biometric preferences.</p>
+            </div>
+          </div>
+          <div class="walkthrough-step">
+            <div class="walkthrough-step-number">3</div>
+            <div class="walkthrough-step-content">
+              <h5>Upload Documents</h5>
+              <p>Upload proof of identity, proof of address, and date of birth documents.</p>
+            </div>
+          </div>
+          <div class="walkthrough-step">
+            <div class="walkthrough-step-number">4</div>
+            <div class="walkthrough-step-content">
+              <h5>Book Appointment</h5>
+              <p>Select a nearby enrollment center and book a time slot for biometric capture.</p>
+            </div>
+          </div>
+          <div class="walkthrough-step">
+            <div class="walkthrough-step-number">5</div>
+            <div class="walkthrough-step-content">
+              <h5>Receive Aadhaar</h5>
+              <p>Your Aadhaar will be generated within 15 days and delivered to your address.</p>
+            </div>
+          </div>
+        </div>
+        <div class="walkthrough-visual">
+          <div class="walkthrough-visual-card">
+            <div class="walkthrough-visual-icon"><i class="bi bi-person-badge"></i></div>
+            <h5>Aadhaar Card</h5>
+            <p>Identity Services</p>
+            <div class="walkthrough-visual-stats">
+              <div><span class="fw-bold">15 Days</span><br><small class="text-muted">Processing</small></div>
+              <div><span class="fw-bold">Free</span><br><small class="text-muted">Cost</small></div>
+              <div><span class="fw-bold">99%</span><br><small class="text-muted">Success</small></div>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Start Application</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLA / Processing Times -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-stopwatch"></i> Processing Times</span>
+        <h2>Service Level Commitments</h2>
+        <p>We guarantee transparent processing timelines for every service you apply for.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="sla-card">
+            <div class="sla-header">
+              <div class="sla-icon bg-primary-light"><i class="bi bi-person-badge"></i></div>
+              <h5>Identity Services</h5>
+            </div>
+            <div class="sla-items">
+              <div class="sla-item">
+                <span class="sla-name">Aadhaar Card</span>
+                <span class="sla-time">15 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">PAN Card</span>
+                <span class="sla-time">7 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Voter ID</span>
+                <span class="sla-time">30 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Caste Certificate</span>
+                <span class="sla-time">10 Days</span>
+              </div>
+            </div>
+            <div class="sla-footer">
+              <span class="sla-compliance"><i class="bi bi-check-circle-fill"></i> 96% on-time delivery</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="sla-card">
+            <div class="sla-header">
+              <div class="sla-icon bg-success-light"><i class="bi bi-cash-stack"></i></div>
+              <h5>Revenue Services</h5>
+            </div>
+            <div class="sla-items">
+              <div class="sla-item">
+                <span class="sla-name">Property Tax</span>
+                <span class="sla-time">Instant</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Income Certificate</span>
+                <span class="sla-time">7 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Land Records</span>
+                <span class="sla-time">Instant</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Mutation Request</span>
+                <span class="sla-time">45 Days</span>
+              </div>
+            </div>
+            <div class="sla-footer">
+              <span class="sla-compliance"><i class="bi bi-check-circle-fill"></i> 98% on-time delivery</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="sla-card">
+            <div class="sla-header">
+              <div class="sla-icon bg-info-light"><i class="bi bi-car-front"></i></div>
+              <h5>Transport Services</h5>
+            </div>
+            <div class="sla-items">
+              <div class="sla-item">
+                <span class="sla-name">Driving License</span>
+                <span class="sla-time">21 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Vehicle Registration</span>
+                <span class="sla-time">10 Days</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">Pollution Certificate</span>
+                <span class="sla-time">Instant</span>
+              </div>
+              <div class="sla-item">
+                <span class="sla-name">RC Transfer</span>
+                <span class="sla-time">30 Days</span>
+              </div>
+            </div>
+            <div class="sla-footer">
+              <span class="sla-compliance"><i class="bi bi-check-circle-fill"></i> 94% on-time delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Services -->
+  <section class="section-padding emergency-section">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge" style="background: rgba(239,68,68,0.1); color: var(--danger);"><i class="bi bi-exclamation-triangle"></i> Emergency</span>
+        <h2>Emergency &amp; Quick Access Services</h2>
+        <p>Critical services that are available 24/7 with priority processing.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <a href="#" class="emergency-card">
+            <div class="emergency-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">
+              <i class="bi bi-telephone-inbound"></i>
+            </div>
+            <h5>Police Emergency</h5>
+            <p>Report crime, accident, or get immediate police assistance.</p>
+            <div class="emergency-number"><i class="bi bi-telephone-fill"></i> 100</div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <a href="#" class="emergency-card">
+            <div class="emergency-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+              <i class="bi bi-fire"></i>
+            </div>
+            <h5>Fire Services</h5>
+            <p>Report fire emergencies and request fire brigade dispatch.</p>
+            <div class="emergency-number"><i class="bi bi-telephone-fill"></i> 101</div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <a href="#" class="emergency-card">
+            <div class="emergency-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <h5>Ambulance</h5>
+            <p>Request emergency medical transport to the nearest hospital.</p>
+            <div class="emergency-number"><i class="bi bi-telephone-fill"></i> 108</div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <a href="#" class="emergency-card">
+            <div class="emergency-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5>Women Helpline</h5>
+            <p>24/7 support for women in distress with immediate assistance.</p>
+            <div class="emergency-number"><i class="bi bi-telephone-fill"></i> 1091</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- How It Works -->
   <section class="section-padding section-bg">
     <div class="container">
@@ -262,7 +589,7 @@
         <div class="col-lg-3 col-md-6 fade-in delay-1">
           <div class="text-center">
             <div class="why-us-number mx-auto mb-3" style="font-size:1.4rem;">01</div>
-            <h5>Register Account</h5>
+              <h5>Sign Up</h5>
             <p class="text-muted" style="font-size:0.9rem;">Create your free citizen account with basic details and verify your identity.</p>
           </div>
         </div>
@@ -295,7 +622,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-4">
+        <div class="col-lg col-md-4">
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4">
             <img src="images/logo.webp" alt="Stackly" class="brand-logo-img">
           </a>
@@ -307,13 +634,14 @@
             <a href="404.html"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li></ul></div>
-        <div class="col-lg-2 col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li></ul></div>
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Departments</h5><ul class="footer-links"><li><a href="departments.html">Identity & Documentation</a></li><li><a href="departments.html">Revenue & Taxation</a></li><li><a href="departments.html">Health & Welfare</a></li><li><a href="departments.html">Education</a></li><li><a href="departments.html">Housing & Urban Dev</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li></ul></div>
+        <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div><div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div></div>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-telephone"></i></div><div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@govconnect.gov.in</p></div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@stackly.gov.in</p></div></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 Stackly. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div></div></div></div>

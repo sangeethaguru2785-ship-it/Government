@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="page-transition-in">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -25,22 +25,21 @@
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
           <li class="nav-item"><a href="schemes.html" class="nav-link">Schemes</a></li>
-          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
           <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <section class="page-header" style="background-image: url('images/bg_about.webp');">
     <div class="container">
-      <h1>About Stackly</h1>
-      <nav aria-label="breadcrumb">
+      <h1 class="hero-anim hero-anim-1">About Stackly</h1>
+      <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">About Us</li>
@@ -56,7 +55,7 @@
         <div class="col-lg-6 slide-in-left">
           <div class="about-image-wrapper">
             <div class="about-image">
-              <i class="bi bi-building-check about-icon-large"></i>
+              <img src="images/about_portal.webp" alt="Smart Governance Portal">
             </div>
             <div class="about-exp-badge">
               <div class="number">15+</div>
@@ -134,8 +133,105 @@
     </div>
   </section>
 
-  <!-- Our Journey Timeline -->
+  <!-- Core Values Deep Dive -->
   <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-gem"></i> What Drives Us</span>
+        <h2>Our Core Values in Action</h2>
+        <p>Every decision we make is rooted in these principles, ensuring we serve citizens with excellence.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="value-deep-card">
+            <div class="value-deep-icon">
+              <i class="bi bi-eye-fill"></i>
+            </div>
+            <h5>Transparency</h5>
+            <p>We believe in open governance. Every process, decision, and outcome on our platform is visible and auditable, building trust between citizens and government.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> Public dashboards for all services</li>
+              <li><i class="bi bi-check2"></i> Real-time status tracking</li>
+              <li><i class="bi bi-check2"></i> Open data initiatives</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="value-deep-card">
+            <div class="value-deep-icon" style="background: var(--success-light); color: var(--success);">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5>Inclusivity</h5>
+            <p>Government services belong to everyone. We design for all citizens regardless of age, location, language, or ability, ensuring no one is left behind.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> 12+ regional languages</li>
+              <li><i class="bi bi-check2"></i> Accessibility-first design</li>
+              <li><i class="bi bi-check2"></i> Rural outreach programs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="value-deep-card">
+            <div class="value-deep-icon" style="background: var(--info-light); color: var(--info);">
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+            <h5>Innovation</h5>
+            <p>We embrace emerging technologies to continuously improve how citizens interact with government, from AI-powered processing to blockchain-secured records.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> AI document processing</li>
+              <li><i class="bi bi-check2"></i> Blockchain verification</li>
+              <li><i class="bi bi-check2"></i> IoT-enabled services</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="value-deep-card">
+            <div class="value-deep-icon" style="background: var(--warning-light); color: var(--warning);">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <h5>Security</h5>
+            <p>Citizen data is sacred. We employ enterprise-grade security measures, end-to-end encryption, and rigorous compliance standards to protect every byte of information.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> 256-bit AES encryption</li>
+              <li><i class="bi bi-check2"></i> ISO 27001 certified</li>
+              <li><i class="bi bi-check2"></i> Regular security audits</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="value-deep-card">
+            <div class="value-deep-icon" style="background: var(--danger-light); color: var(--danger);">
+              <i class="bi bi-clipboard-check-fill"></i>
+            </div>
+            <h5>Accountability</h5>
+            <p>We take ownership of every service delivery. Our SLA-driven approach ensures commitments are met, and failures are addressed with full transparency.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> 98% SLA compliance rate</li>
+              <li><i class="bi bi-check2"></i> Citizen feedback loops</li>
+              <li><i class="bi bi-check2"></i> Third-party audits</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="value-deep-card">
+            <div class="value-deep-icon" style="background: var(--accent-light); color: var(--accent);">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <h5>Efficiency</h5>
+            <p>We eliminate red tape and bureaucracy through smart automation, reducing processing times from weeks to hours while maintaining the highest quality standards.</p>
+            <ul class="value-deep-list">
+              <li><i class="bi bi-check2"></i> Automated workflows</li>
+              <li><i class="bi bi-check2"></i> Paperless processing</li>
+              <li><i class="bi bi-check2"></i> Instant notifications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Journey Timeline -->
+  <section class="section-padding section-bg">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 slide-in-left">
@@ -191,6 +287,123 @@
     </div>
   </section>
 
+  <!-- Milestones by Year -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-trophy"></i> Key Achievements</span>
+        <h2>Milestones That Define Us</h2>
+        <p>A look at the significant landmarks we have achieved in our journey of digital governance.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="milestone-card">
+            <div class="milestone-year">2011</div>
+            <div class="milestone-content">
+              <h5>Foundation Year</h5>
+              <p>Launched with 15 basic services and a vision to digitize governance.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span>15 Services Launched</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: var(--success);">2014</div>
+            <div class="milestone-content">
+              <h5>First Million Users</h5>
+              <p>Crossed 1 million registered citizens within 3 years of operation.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-people"></i>
+                <span>1M+ Users Milestone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: var(--info);">2018</div>
+            <div class="milestone-content">
+              <h5>National Expansion</h5>
+              <p>Expanded to all 36 states and union territories across India.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-globe-americas"></i>
+                <span>36 States Covered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: var(--warning);">2021</div>
+            <div class="milestone-content">
+              <h5>Award Winning</h5>
+              <p>Received the National Digital Governance Award for excellence in e-services.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-award"></i>
+                <span>National Award Winner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: var(--danger);">2023</div>
+            <div class="milestone-content">
+              <h5>AI Integration</h5>
+              <p>Deployed AI-powered document processing reducing turnaround by 60%.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-cpu"></i>
+                <span>60% Faster Processing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: var(--accent);">2024</div>
+            <div class="milestone-content">
+              <h5>100+ Services</h5>
+              <p>Surpassed 100 fully digital services with 98% citizen satisfaction rate.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-check-circle"></i>
+                <span>98% Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="milestone-card">
+            <div class="milestone-year" style="background: #2563EB;">2025</div>
+            <div class="milestone-content">
+              <h5>Blockchain Security</h5>
+              <p>Implemented blockchain-based verification for all identity documents.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-link-45deg"></i>
+                <span>Blockchain Secured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="milestone-card">
+            <div class="milestone-year">2026</div>
+            <div class="milestone-content">
+              <h5>50K Citizens</h5>
+              <p>Now serving 50,000+ citizens with 120+ services and expanding daily.</p>
+              <div class="milestone-stat">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span>50,000+ Active Users</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Stats -->
   <section class="stats-section section-padding">
     <div class="container position-relative">
@@ -223,8 +436,99 @@
     </div>
   </section>
 
-  <!-- Team Section -->
+  <!-- Impact / Infographic -->
   <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-bar-chart-line"></i> Our Impact</span>
+        <h2>Numbers That Speak Louder</h2>
+        <p>A detailed look at how we are making a measurable difference in citizen service delivery.</p>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 fade-in">
+          <div class="impact-progress-group">
+            <div class="impact-progress-item">
+              <div class="impact-progress-header">
+                <span class="impact-progress-label">Service Digitization</span>
+                <span class="impact-progress-value">80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%;" data-width="80"></div>
+              </div>
+              <span class="impact-progress-desc">120 of 150 total services are now fully digital</span>
+            </div>
+            <div class="impact-progress-item">
+              <div class="impact-progress-header">
+                <span class="impact-progress-label">Citizen Satisfaction</span>
+                <span class="impact-progress-value">98%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 98%;" data-width="98"></div>
+              </div>
+              <span class="impact-progress-desc">Based on 12,400+ feedback responses received</span>
+            </div>
+            <div class="impact-progress-item">
+              <div class="impact-progress-header">
+                <span class="impact-progress-label">Processing Efficiency</span>
+                <span class="impact-progress-value">92%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 92%;" data-width="92"></div>
+              </div>
+              <span class="impact-progress-desc">Applications resolved within target SLA timeframe</span>
+            </div>
+            <div class="impact-progress-item">
+              <div class="impact-progress-header">
+                <span class="impact-progress-label">Digital Adoption Rate</span>
+                <span class="impact-progress-value">75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%;" data-width="75"></div>
+              </div>
+              <span class="impact-progress-desc">Citizens using online channels vs. physical offices</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in delay-2">
+          <div class="impact-cards-grid">
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-primary-light"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="impact-stat-number" data-count="245000" data-suffix="+">0</div>
+              <div class="impact-stat-label">Documents Processed</div>
+            </div>
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-success-light"><i class="bi bi-currency-rupee"></i></div>
+              <div class="impact-stat-number" data-count="180" data-suffix=" Cr">0</div>
+              <div class="impact-stat-label">Revenue Collected</div>
+            </div>
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-info-light"><i class="bi bi-clock-history"></i></div>
+              <div class="impact-stat-number" data-count="3" data-suffix=".4 hrs">0</div>
+              <div class="impact-stat-label">Avg. Processing Time</div>
+            </div>
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-warning-light"><i class="bi bi-coin"></i></div>
+              <div class="impact-stat-number" data-count="42" data-suffix="%">0</div>
+              <div class="impact-stat-label">Cost Savings for Citizens</div>
+            </div>
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-danger-light"><i class="bi bi-x-octagon"></i></div>
+              <div class="impact-stat-number" data-count="87" data-suffix="%">0</div>
+              <div class="impact-stat-label">Reduction in Queue Wait</div>
+            </div>
+            <div class="impact-stat-card">
+              <div class="impact-stat-icon bg-accent-light"><i class="bi bi-printer"></i></div>
+              <div class="impact-stat-number" data-count="95" data-suffix="%">0</div>
+              <div class="impact-stat-label">Paperless Achievement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section-padding section-bg">
     <div class="container">
       <div class="section-title fade-in">
         <span class="section-badge"><i class="bi bi-people"></i> Leadership</span>
@@ -232,9 +536,11 @@
         <p>Meet the leaders driving digital transformation in governance.</p>
       </div>
       <div class="row g-4">
-        <div class="col-lg-3 col-md-6 fade-in delay-1">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-1">
           <div class="team-card">
-            <div class="team-avatar"><i class="bi bi-person"></i></div>
+            <div class="team-avatar">
+              <img src="images/team_arvind.webp" alt="Dr. Amit Patel">
+            </div>
             <div class="team-info">
               <h5>Dr. Amit Patel</h5>
               <p>Chief Digital Officer</p>
@@ -246,9 +552,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-2">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-2">
           <div class="team-card">
-            <div class="team-avatar" style="background: linear-gradient(135deg, #10B981, #059669);"><i class="bi bi-person"></i></div>
+            <div class="team-avatar">
+              <img src="images/team_priya.webp" alt="Smt. Priya Nair">
+            </div>
             <div class="team-info">
               <h5>Smt. Priya Nair</h5>
               <p>Secretary, IT Department</p>
@@ -260,9 +568,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-3">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-3">
           <div class="team-card">
-            <div class="team-avatar" style="background: linear-gradient(135deg, #C5A55A, #D4AF37);"><i class="bi bi-person"></i></div>
+            <div class="team-avatar">
+              <img src="images/team_rahul.webp" alt="Shri. Ravi Kumar">
+            </div>
             <div class="team-info">
               <h5>Shri. Ravi Kumar</h5>
               <p>Technical Director</p>
@@ -274,9 +584,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-4">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-4">
           <div class="team-card">
-            <div class="team-avatar" style="background: linear-gradient(135deg, #D4AF37, #EF4444);"><i class="bi bi-person"></i></div>
+            <div class="team-avatar">
+              <img src="images/team_sunita.webp" alt="Ms. Kavita Singh">
+            </div>
             <div class="team-info">
               <h5>Ms. Kavita Singh</h5>
               <p>Head of Operations</p>
@@ -284,6 +596,152 @@
                 <a href="404.html"><i class="bi bi-linkedin"></i></a>
                 <a href="404.html"><i class="bi bi-twitter-x"></i></a>
                 <a href="#"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Achievements -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-award"></i> Recognition</span>
+        <h2>Awards &amp; Achievements</h2>
+        <p>Our commitment to excellence has been recognized by leading institutions and organizations.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="bi bi-trophy-fill"></i>
+            </div>
+            <div class="award-year">2025</div>
+            <h5>National Digital Governance Award</h5>
+            <p>Awarded by the Ministry of Electronics & IT for outstanding contribution to e-governance and citizen service delivery.</p>
+            <span class="award-org"><i class="bi bi-building"></i> Ministry of Electronics & IT</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="award-card">
+            <div class="award-icon" style="background: var(--success-light); color: var(--success);">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <div class="award-year" style="background: var(--success);">2024</div>
+            <h5>ISO 27001 Certification</h5>
+            <p>Achieved international certification for information security management, demonstrating our commitment to data protection.</p>
+            <span class="award-org"><i class="bi bi-building"></i> International Organization for Standardization</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="award-card">
+            <div class="award-icon" style="background: var(--info-light); color: var(--info);">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="award-year" style="background: var(--info);">2024</div>
+            <h5>Best Citizen Portal Award</h5>
+            <p>Recognized as the best government citizen services portal at the National e-Governance Summit 2024.</p>
+            <span class="award-org"><i class="bi bi-building"></i> National e-Governance Summit</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="award-card">
+            <div class="award-icon" style="background: var(--warning-light); color: var(--warning);">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <div class="award-year" style="background: var(--warning);">2023</div>
+            <h5>UN Public Service Award</h5>
+            <p>Honored by the United Nations for innovative digital governance solutions that improved access to public services.</p>
+            <span class="award-org"><i class="bi bi-building"></i> United Nations Department of Economic Affairs</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="award-card">
+            <div class="award-icon" style="background: var(--danger-light); color: var(--danger);">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <div class="award-year" style="background: var(--danger);">2022</div>
+            <h5>Citizen Choice Award</h5>
+            <p>Voted as the most trusted and user-friendly government platform by citizens across 12 states.</p>
+            <span class="award-org"><i class="bi bi-building"></i> Digital India Foundation</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="award-card">
+            <div class="award-icon" style="background: var(--accent-light); color: var(--accent);">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <div class="award-year" style="background: var(--accent);">2021</div>
+            <h5>Innovation in Public Service</h5>
+            <p>Recognized for pioneering AI-driven document processing and automated approval workflows.</p>
+            <span class="award-org"><i class="bi bi-building"></i> NASSCOM Government Technology Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stakeholder Testimonials -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-chat-quote"></i> What They Say</span>
+        <h2>Stakeholder Testimonials</h2>
+        <p>Hear from citizens, government departments, and partner organizations who trust our platform.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 fade-in delay-1">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">&ldquo;</div>
+            <div class="testimonial-rating mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">As a department head, Stackly has transformed how we serve citizens. Our processing time dropped from 15 days to just 3 hours. The platform is a game-changer for public service delivery.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="images/team_arvind.webp" alt="Shri Anil Kapoor">
+              </div>
+              <div class="testimonial-info">
+                <h6>Shri Anil Kapoor</h6>
+                <p>Secretary, Dept. of Revenue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 anim-slide-up delay-2">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">&ldquo;</div>
+            <div class="testimonial-rating mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">I renewed my driving license from my village without traveling to the city. The entire process took less than 10 minutes. This is truly digital India at work!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="images/avatar_prem.webp" alt="Ramesh Kumar">
+              </div>
+              <div class="testimonial-info">
+                <h6>Ramesh Kumar</h6>
+                <p>Citizen, Uttar Pradesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 anim-slide-up delay-3">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">&ldquo;</div>
+            <div class="testimonial-rating mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            </div>
+            <p class="testimonial-text">Partnering with Stackly has been transformative for UIDAI. The integration is seamless, and their commitment to security and data privacy is exceptional. A model for government-tech collaboration.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="images/avatar_anita.webp" alt="Dr. Sunita Reddy">
+              </div>
+              <div class="testimonial-info">
+                <h6>Dr. Sunita Reddy</h6>
+                <p>Director, UIDAI Partnerships</p>
               </div>
             </div>
           </div>
@@ -311,7 +769,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4">
             <img src="images/logo.webp" alt="Stackly" class="brand-logo-img">
           </a>
@@ -324,17 +782,27 @@
             <a href="404.html"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <h5>Quick Links</h5>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="departments.html">Departments</a></li>
             <li><a href="schemes.html">Schemes</a></li>
-            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
+          <h5>Departments</h5>
+          <ul class="footer-links">
+            <li><a href="departments.html">Identity & Documentation</a></li>
+            <li><a href="departments.html">Revenue & Taxation</a></li>
+            <li><a href="departments.html">Health & Welfare</a></li>
+            <li><a href="departments.html">Education</a></li>
+            <li><a href="departments.html">Housing & Urban Dev</a></li>
+          </ul>
+        </div>
+        <div class="col-lg col-md-4">
           <h5>Support</h5>
           <ul class="footer-links">
             <li><a href="faq.html">FAQ</a></li>
@@ -344,7 +812,7 @@
             <li><a href="#">Feedback</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
           <div class="footer-contact-item">
             <div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div>
@@ -356,7 +824,7 @@
           </div>
           <div class="footer-contact-item">
             <div class="footer-contact-icon"><i class="bi bi-envelope"></i></div>
-            <div class="footer-contact-text"><p>support@govconnect.gov.in</p></div>
+            <div class="footer-contact-text"><p>support@stackly.gov.in</p></div>
           </div>
         </div>
       </div>

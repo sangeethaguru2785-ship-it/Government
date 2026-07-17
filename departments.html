@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="page-transition-in">
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -22,21 +22,20 @@
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link active">Departments</a></li>
           <li class="nav-item"><a href="schemes.html" class="nav-link">Schemes</a></li>
-          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
           <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header" style="background-image: url('images/bg_departments.webp');">
     <div class="container">
-      <h1>Government Departments</h1>
-      <nav aria-label="breadcrumb">
+      <h1 class="hero-anim hero-anim-1">Government Departments</h1>
+      <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Departments</li>
@@ -174,6 +173,279 @@
     </div>
   </section>
 
+  <!-- Department Statistics -->
+  <section class="stats-section section-padding">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="stat-item">
+            <div class="stat-number" data-count="117" data-suffix="+">0</div>
+            <div class="stat-label">Total Services Online</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="stat-item">
+            <div class="stat-number" data-count="9" data-suffix="">0</div>
+            <div class="stat-label">Active Departments</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="stat-item">
+            <div class="stat-number" data-count="97" data-suffix="%">0</div>
+            <div class="stat-label">Avg. Satisfaction</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="stat-item">
+            <div class="stat-number" data-count="24" data-suffix=" hrs">0</div>
+            <div class="stat-label">Avg. Resolution Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Department -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-star"></i> Spotlight</span>
+        <h2>Featured Department</h2>
+        <p>Highlighting a department that is leading the way in digital transformation.</p>
+      </div>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 fade-in">
+          <div class="dept-featured-card">
+            <div class="dept-featured-header">
+              <div class="dept-featured-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+              <div>
+                <h3>Health & Family Welfare</h3>
+                <p class="dept-featured-subtitle"><i class="bi bi-award-fill"></i> Highest Rated Department 2026</p>
+              </div>
+            </div>
+            <p class="dept-featured-desc">The Department of Health & Family Welfare has been at the forefront of digital health initiatives, serving over 1.2 million citizens through telemedicine, digital health records, and online insurance enrollment.</p>
+            <div class="dept-featured-stats">
+              <div class="dept-featured-stat">
+                <span class="dept-featured-stat-num">14</span>
+                <span class="dept-featured-stat-label">Services</span>
+              </div>
+              <div class="dept-featured-stat">
+                <span class="dept-featured-stat-num">1.2M</span>
+                <span class="dept-featured-stat-label">Citizens</span>
+              </div>
+              <div class="dept-featured-stat">
+                <span class="dept-featured-stat-num">99%</span>
+                <span class="dept-featured-stat-label">Uptime</span>
+              </div>
+              <div class="dept-featured-stat">
+                <span class="dept-featured-stat-num">2.1 hrs</span>
+                <span class="dept-featured-stat-label">Avg. Time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in delay-2">
+          <div class="dept-featured-services">
+            <h5 class="mb-3">Key Digital Services</h5>
+            <div class="dept-featured-service-item">
+              <div class="dept-featured-service-icon bg-success-light"><i class="bi bi-shield-plus"></i></div>
+              <div>
+                <h6>Health Insurance Enrollment</h6>
+                <p>Enroll in Ayushman Bharat and state health insurance schemes online.</p>
+              </div>
+            </div>
+            <div class="dept-featured-service-item">
+              <div class="dept-featured-service-icon bg-primary-light"><i class="bi bi-camera-video"></i></div>
+              <div>
+                <h6>Telemedicine Consultation</h6>
+                <p>Connect with government doctors via video call from your home.</p>
+              </div>
+            </div>
+            <div class="dept-featured-service-item">
+              <div class="dept-featured-service-icon bg-info-light"><i class="bi bi-file-earmark-medical"></i></div>
+              <div>
+                <h6>Digital Health Records</h6>
+                <p>Access your complete medical history through your digital health ID.</p>
+              </div>
+            </div>
+            <div class="dept-featured-service-item">
+              <div class="dept-featured-service-icon bg-warning-light"><i class="bi bi-calendar-check"></i></div>
+              <div>
+                <h6>Hospital OPD Booking</h6>
+                <p>Book outpatient appointments at government hospitals instantly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Department News & Updates -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-megaphone"></i> Updates</span>
+        <h2>Department News &amp; Announcements</h2>
+        <p>Latest updates from various government departments on new services and initiatives.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-success-light"><i class="bi bi-heart-pulse"></i></div>
+              <span>Health & Family Welfare</span>
+            </div>
+            <h5>New Telemedicine Centers in Rural Areas</h5>
+            <p>500 new telemedicine centers have been set up across rural districts to provide remote healthcare access.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> July 12, 2026</span>
+              <span><i class="bi bi-tag"></i> Infrastructure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-primary-light"><i class="bi bi-bank"></i></div>
+              <span>Finance & Revenue</span>
+            </div>
+            <h5>Property Tax Online Payment Extended</h5>
+            <p>Online property tax payment window extended till August 31, 2026 with zero late fee for early filers.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> July 10, 2026</span>
+              <span><i class="bi bi-tag"></i> Taxation</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-info-light"><i class="bi bi-car-front"></i></div>
+              <span>Transport</span>
+            </div>
+            <h5>Vehicle Registration Goes Fully Digital</h5>
+            <p>All vehicle registration processes are now 100% online with no physical document submission required.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> July 8, 2026</span>
+              <span><i class="bi bi-tag"></i> Digitization</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-accent-light"><i class="bi bi-mortarboard"></i></div>
+              <span>Education</span>
+            </div>
+            <h5>Scholarship Disbursement Speed Up</h5>
+            <p>Scholarship funds now credited within 7 working days of approval, down from 30 days previously.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> July 5, 2026</span>
+              <span><i class="bi bi-tag"></i> Policy</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-danger-light"><i class="bi bi-shield-check"></i></div>
+              <span>Home Affairs</span>
+            </div>
+            <h5>Passport Seva Kendra Expansion</h5>
+            <p>12 new Passport Seva Kendras opened in tier-2 cities to reduce appointment wait times by 40%.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> July 2, 2026</span>
+              <span><i class="bi bi-tag"></i> Expansion</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="dept-news-card">
+            <div class="dept-news-dept">
+              <div class="dept-news-dept-icon bg-warning-light"><i class="bi bi-house-door"></i></div>
+              <span>Housing & Urban Affairs</span>
+            </div>
+            <h5>Building Permit Fast-Track Scheme</h5>
+            <p>Residential building permits under 500 sq.m. will now be auto-approved within 48 hours.</p>
+            <div class="dept-news-meta">
+              <span><i class="bi bi-calendar3"></i> June 28, 2026</span>
+              <span><i class="bi bi-tag"></i> Reform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Org Chart / Hierarchy -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-diagram-3"></i> Structure</span>
+        <h2>Organizational Hierarchy</h2>
+        <p>Understanding how our digital governance platform is structured for efficient service delivery.</p>
+      </div>
+      <div class="org-chart fade-in">
+        <div class="org-level org-level-1">
+          <div class="org-node org-node-head">
+            <div class="org-node-icon"><i class="bi bi-person-workspace"></i></div>
+            <h6>Chief Secretary</h6>
+            <p>Dr. Arvind Mehta</p>
+          </div>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-level org-level-2">
+          <div class="org-node">
+            <div class="org-node-icon" style="background: var(--success-light); color: var(--success);"><i class="bi bi-cpu"></i></div>
+            <h6>IT Secretary</h6>
+            <p>Digital Platforms</p>
+          </div>
+          <div class="org-node">
+            <div class="org-node-icon" style="background: var(--info-light); color: var(--info);"><i class="bi bi-bank"></i></div>
+            <h6>Finance Secretary</h6>
+            <p>Revenue & Budget</p>
+          </div>
+          <div class="org-node">
+            <div class="org-node-icon" style="background: var(--warning-light); color: var(--warning);"><i class="bi bi-heart-pulse"></i></div>
+            <h6>Health Secretary</h6>
+            <p>Health Services</p>
+          </div>
+        </div>
+        <div class="org-connector"></div>
+        <div class="org-level org-level-3">
+          <div class="org-node org-node-sm">
+            <div class="org-node-icon" style="background: var(--primary-ultra-light); color: var(--primary);"><i class="bi bi-code-slash"></i></div>
+            <h6>Tech Lead</h6>
+            <p>Platform Dev</p>
+          </div>
+          <div class="org-node org-node-sm">
+            <div class="org-node-icon" style="background: var(--primary-ultra-light); color: var(--primary);"><i class="bi bi-database"></i></div>
+            <h6>Data Lead</h6>
+            <p>Analytics & Reports</p>
+          </div>
+          <div class="org-node org-node-sm">
+            <div class="org-node-icon" style="background: var(--primary-ultra-light); color: var(--primary);"><i class="bi bi-headset"></i></div>
+            <h6>Support Lead</h6>
+            <p>Citizen Helpdesk</p>
+          </div>
+          <div class="org-node org-node-sm">
+            <div class="org-node-icon" style="background: var(--primary-ultra-light); color: var(--primary);"><i class="bi bi-shield-check"></i></div>
+            <h6>Security Lead</h6>
+            <p>Data Protection</p>
+          </div>
+          <div class="org-node org-node-sm">
+            <div class="org-node-icon" style="background: var(--primary-ultra-light); color: var(--primary);"><i class="bi bi-people"></i></div>
+            <h6>Operations Lead</h6>
+            <p>Service Delivery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section section-padding">
     <div class="container position-relative">
       <div class="row align-items-center">
@@ -191,18 +463,19 @@
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4"><img src="images/logo.webp" alt="Stackly" class="brand-logo-img"></a>
           <p style="font-size:0.9rem;max-width:280px;">A unified digital platform connecting citizens with government services. Making governance accessible, transparent, and efficient for everyone.</p>
           <div class="footer-social"><a href="404.html"><i class="bi bi-facebook"></i></a><a href="404.html"><i class="bi bi-twitter-x"></i></a><a href="404.html"><i class="bi bi-instagram"></i></a><a href="404.html"><i class="bi bi-linkedin"></i></a><a href="404.html"><i class="bi bi-youtube"></i></a></div>
         </div>
-        <div class="col-lg-3 col-md-6"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="news.html">News</a></li></ul></div>
-        <div class="col-lg-3 col-md-6"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Departments</h5><ul class="footer-links"><li><a href="departments.html">Identity & Documentation</a></li><li><a href="departments.html">Revenue & Taxation</a></li><li><a href="departments.html">Health & Welfare</a></li><li><a href="departments.html">Education</a></li><li><a href="departments.html">Housing & Urban Dev</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
+        <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div><div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div></div>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-telephone"></i></div><div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@govconnect.gov.in</p></div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@stackly.gov.in</p></div></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 Stackly. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div></div></div></div>

@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="page-transition-in">
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -22,21 +22,20 @@
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
           <li class="nav-item"><a href="schemes.html" class="nav-link">Schemes</a></li>
-          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
           <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header" style="background-image: url('images/bg_contact.webp');">
     <div class="container">
-      <h1>Contact Us</h1>
-      <nav aria-label="breadcrumb">
+      <h1 class="hero-anim hero-anim-1">Contact Us</h1>
+      <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Contact</li>
@@ -67,7 +66,7 @@
           <div class="contact-info-card">
             <div class="contact-icon bg-accent-light"><i class="bi bi-envelope"></i></div>
             <h5>Email Us</h5>
-            <p>support@govconnect.gov.in<br>info@govconnect.gov.in</p>
+            <p>support@stackly.gov.in<br>info@stackly.gov.in</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 fade-in delay-4">
@@ -81,11 +80,11 @@
     </div>
   </section>
 
-  <!-- Contact Form & Map -->
+  <!-- Contact Form -->
   <section class="section-padding">
     <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-7 slide-in-left">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
           <h3 class="mb-2">Send Us a Message</h3>
           <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we'll get back to you within 24 hours.</p>
           <div class="contact-form-wrapper">
@@ -125,39 +124,323 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-5 slide-in-right">
-          <h3 class="mb-2">Find Us on Map</h3>
-          <p class="text-muted mb-4">Visit our office during working hours for in-person assistance.</p>
-          <div class="map-container mb-4">
-            <div class="map-placeholder">
-              <i class="bi bi-geo-alt-fill"></i>
-              <h5>Government Secretariat</h5>
-              <p>New Delhi, India</p>
-              <a href="https://maps.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Open in Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Width Google Map -->
+  <section class="contact-map-section">
+    <div class="contact-map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224365.83920982568!2d77.0688988!3d28.527582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1689000000000!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="New Delhi, India Map">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Directions -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-signpost-2"></i> How to Reach Us</span>
+        <h2>Directions to Our Office</h2>
+        <p>Multiple convenient ways to reach the Government Secretariat in New Delhi.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="contact-direction-card">
+            <div class="contact-direction-card-icon"><i class="bi bi-train-front"></i></div>
+            <h5>By Metro</h5>
+            <p>Central Secretariat Metro Station (Yellow Line) — 2 min walk to Gate No. 2</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="contact-direction-card">
+            <div class="contact-direction-card-icon"><i class="bi bi-bus-front"></i></div>
+            <h5>By Bus</h5>
+            <p>Bus routes 103, 104, 520 — Secretariat Bus Stop, 1 min walk</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="contact-direction-card">
+            <div class="contact-direction-card-icon"><i class="bi bi-car-front"></i></div>
+            <h5>By Car</h5>
+            <p>Visitor parking available at Gate No. 3 — Free for first 2 hours</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="contact-direction-card">
+            <div class="contact-direction-card-icon"><i class="bi bi-geo-alt"></i></div>
+            <h5>Address</h5>
+            <p>North Block, Central Secretariat, New Delhi - 110001</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Department Contacts -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-building"></i> Department Helpdesk</span>
+        <h2>Department Contacts</h2>
+        <p>Connect directly with the right department for faster resolution.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--primary-ultra-light);color:var(--primary);"><i class="bi bi-person-badge"></i></div>
+            <h5>Identity & Documentation</h5>
+            <p>Aadhaar, PAN, Voter ID, Passport</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 011-2301-1001</span>
+              <span><i class="bi bi-envelope"></i> identity@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--success-light);color:var(--success);"><i class="bi bi-cash-stack"></i></div>
+            <h5>Revenue & Taxation</h5>
+            <p>Property Tax, Income Tax, GST</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 011-2301-1002</span>
+              <span><i class="bi bi-envelope"></i> revenue@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--info-light);color:var(--info);"><i class="bi bi-heart-pulse"></i></div>
+            <h5>Health & Welfare</h5>
+            <p>Health Cards, Insurance, Hospitals</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 011-2301-1003</span>
+              <span><i class="bi bi-envelope"></i> health@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Sat, 8AM-8PM</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-4">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--warning-light);color:var(--warning);"><i class="bi bi-mortarboard"></i></div>
+            <h5>Education & Scholarships</h5>
+            <p>School Admission, Scholarships, Exams</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 011-2301-1004</span>
+              <span><i class="bi bi-envelope"></i> education@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-5PM</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-5">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--danger-light);color:var(--danger);"><i class="bi bi-house-gear"></i></div>
+            <h5>Housing & Urban Dev</h5>
+            <p>PM Awas, Building Plans, Water Supply</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 011-2301-1005</span>
+              <span><i class="bi bi-envelope"></i> housing@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-6">
+          <div class="dept-contact-card">
+            <div class="dept-contact-icon" style="background:var(--primary-ultra-light);color:var(--secondary);"><i class="bi bi-headset"></i></div>
+            <h5>Technical Support</h5>
+            <p>Portal Issues, Login Help, Payments</p>
+            <div class="dept-contact-info">
+              <span><i class="bi bi-telephone"></i> 1800-180-1551</span>
+              <span><i class="bi bi-envelope"></i> support@gov.gov.in</span>
+            </div>
+            <span class="dept-contact-hours"><i class="bi bi-clock"></i> 24/7 Toll Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Offices -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-geo-alt"></i> Across India</span>
+        <h2>Regional Offices</h2>
+        <p>Visit any of our regional offices across India for in-person assistance.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">North India</span>
+            </div>
+            <h5>New Delhi</h5>
+            <p><i class="bi bi-geo-alt"></i> North Block, Central Secretariat, New Delhi - 110001</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 011-2301-2001</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
             </div>
           </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">South India</span>
+            </div>
+            <h5>Chennai</h5>
+            <p><i class="bi bi-geo-alt"></i> Tamil Nadu Secretariat, Chennai - 600009</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 044-2301-2002</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">West India</span>
+            </div>
+            <h5>Mumbai</h5>
+            <p><i class="bi bi-geo-alt"></i> Mantralaya, Mumbai - 400032</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 022-2301-2003</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">East India</span>
+            </div>
+            <h5>Kolkata</h5>
+            <p><i class="bi bi-geo-alt"></i> Writers' Building, Kolkata - 700001</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 033-2301-2004</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 5:30 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-5">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">Central India</span>
+            </div>
+            <h5>Bhopal</h5>
+            <p><i class="bi bi-geo-alt"></i> Vallabh Bhawan, Bhopal - 462004</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 0755-2301-2005</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-6">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">Northeast India</span>
+            </div>
+            <h5>Guwahati</h5>
+            <p><i class="bi bi-geo-alt"></i> Assam Secretariat, Dispur, Guwahati - 781006</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 0361-2301-2006</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 5 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-7">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">Northwest India</span>
+            </div>
+            <h5>Jaipur</h5>
+            <p><i class="bi bi-geo-alt"></i> Secretariat Building, Jaipur - 302005</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 0141-2301-2007</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-8">
+          <div class="regional-office-card">
+            <div class="regional-office-header">
+              <span class="regional-office-region">Southeast India</span>
+            </div>
+            <h5>Bengaluru</h5>
+            <p><i class="bi bi-geo-alt"></i> Vidhana Soudha, Bengaluru - 560001</p>
+            <div class="regional-office-contact">
+              <span><i class="bi bi-telephone"></i> 080-2301-2008</span>
+              <span><i class="bi bi-clock"></i> 9 AM - 6 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <h5 class="mb-3">Emergency Helplines</h5>
-          <div class="d-flex flex-column gap-3">
-            <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-              <div class="service-icon bg-danger-light" style="width:40px;height:40px;min-width:40px;font-size:1rem;"><i class="bi bi-telephone"></i></div>
-              <div>
-                <h6 class="mb-0" style="font-size:0.9rem;">Police</h6>
-                <small class="text-muted">100</small>
+  <!-- Contact FAQ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-question-circle"></i> FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions about contacting us.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-faq-accordion fade-in" id="contactFaqAccordion">
+            <div class="contact-faq-item">
+              <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>What is the average response time for emails?</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="contact-faq-answer">
+                <p>We aim to respond to all email inquiries within 24 hours during working days. For urgent matters, we recommend calling our toll-free helpline at 1800-180-1551 for immediate assistance.</p>
               </div>
             </div>
-            <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-              <div class="service-icon bg-danger-light" style="width:40px;height:40px;min-width:40px;font-size:1rem;"><i class="bi bi-heart-pulse"></i></div>
-              <div>
-                <h6 class="mb-0" style="font-size:0.9rem;">Ambulance</h6>
-                <small class="text-muted">108</small>
+            <div class="contact-faq-item">
+              <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Can I visit the office without an appointment?</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="contact-faq-answer">
+                <p>Walk-in visits are welcome during working hours (Mon-Fri, 9AM-6PM). However, for complex queries, we recommend booking an appointment in advance to ensure the concerned officer is available.</p>
               </div>
             </div>
-            <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-              <div class="service-icon bg-warning-light" style="width:40px;height:40px;min-width:40px;font-size:1rem;"><i class="bi bi-fire"></i></div>
-              <div>
-                <h6 class="mb-0" style="font-size:0.9rem;">Fire Brigade</h6>
-                <small class="text-muted">101</small>
+            <div class="contact-faq-item">
+              <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>How do I track my complaint or grievance?</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="contact-faq-answer">
+                <p>After filing a complaint, you will receive a tracking ID via SMS and email. You can use this ID on our portal's grievance tracking page or call our helpline to check the status of your complaint.</p>
+              </div>
+            </div>
+            <div class="contact-faq-item">
+              <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Is there a toll-free number for technical support?</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="contact-faq-answer">
+                <p>Yes, our technical support helpline is available 24/7 at 1800-180-1551 (Toll Free). You can also reach us via email at support@stackly.gov.in for portal-related issues.</p>
+              </div>
+            </div>
+            <div class="contact-faq-item">
+              <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <span>Can I get assistance in regional languages?</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="contact-faq-answer">
+                <p>Yes, our helpline supports Hindi, English, Tamil, Telugu, Bengali, Marathi, Kannada, and Gujarati. You can also visit regional offices for assistance in local languages.</p>
               </div>
             </div>
           </div>
@@ -169,18 +452,19 @@
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4"><img src="images/logo.webp" alt="Stackly" class="brand-logo-img"></a>
           <p style="font-size:0.9rem;max-width:280px;">A unified digital platform connecting citizens with government services. Making governance accessible, transparent, and efficient for everyone.</p>
           <div class="footer-social"><a href="404.html"><i class="bi bi-facebook"></i></a><a href="404.html"><i class="bi bi-twitter-x"></i></a><a href="404.html"><i class="bi bi-instagram"></i></a><a href="404.html"><i class="bi bi-linkedin"></i></a><a href="404.html"><i class="bi bi-youtube"></i></a></div>
         </div>
-        <div class="col-lg-3 col-md-6"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="news.html">News</a></li></ul></div>
-        <div class="col-lg-3 col-md-6"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Departments</h5><ul class="footer-links"><li><a href="departments.html">Identity & Documentation</a></li><li><a href="departments.html">Revenue & Taxation</a></li><li><a href="departments.html">Health & Welfare</a></li><li><a href="departments.html">Education</a></li><li><a href="departments.html">Housing & Urban Dev</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
+        <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div><div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div></div>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-telephone"></i></div><div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@govconnect.gov.in</p></div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@stackly.gov.in</p></div></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 Stackly. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div></div></div></div>

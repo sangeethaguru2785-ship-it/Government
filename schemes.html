@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="page-transition-in">
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -22,21 +22,20 @@
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
           <li class="nav-item"><a href="schemes.html" class="nav-link active">Schemes</a></li>
-          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
           <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header" style="background-image: url('images/bg_schemes.webp');">
     <div class="container">
-      <h1>Government Schemes</h1>
-      <nav aria-label="breadcrumb">
+      <h1 class="hero-anim hero-anim-1">Government Schemes</h1>
+      <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Schemes</li>
@@ -173,6 +172,249 @@
     </div>
   </section>
 
+  <!-- Scheme Statistics -->
+  <section class="stats-section section-padding">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 fade-in delay-1">
+          <div class="stat-item">
+            <div class="stat-number" data-count="48" data-suffix="+">0</div>
+            <div class="stat-label">Active Schemes</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-2">
+          <div class="stat-item">
+            <div class="stat-number" data-count="12" data-suffix=" Lakh+">0</div>
+            <div class="stat-label">Total Beneficiaries</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-3">
+          <div class="stat-item">
+            <div class="stat-number" data-count="8500" data-suffix=" Cr">0</div>
+            <div class="stat-label">Budget Disbursed</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 fade-in delay-4">
+          <div class="stat-item">
+            <div class="stat-number" data-count="94" data-suffix="%">0</div>
+            <div class="stat-label">Approval Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Schemes Alert -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge" style="background: rgba(16,185,129,0.1); color: var(--success);"><i class="bi bi-megaphone"></i> Just Announced</span>
+        <h2>Newly Launched Schemes</h2>
+        <p>Be the first to know about the latest government schemes and their benefits.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in delay-1">
+          <div class="scheme-alert-card">
+            <div class="scheme-alert-header">
+              <div class="scheme-alert-badge" style="background: var(--success);">LAUNCHED</div>
+              <span class="scheme-alert-date"><i class="bi bi-calendar3"></i> July 10, 2026</span>
+            </div>
+            <h5>PM Vishwakarma Yojana 2.0</h5>
+            <p>Extended support for artisans and craftspeople with enhanced skill training and tool kits worth Rs. 15,000.</p>
+            <div class="scheme-alert-meta">
+              <span><i class="bi bi-people"></i> 5 Lakh Beneficiaries</span>
+              <span><i class="bi bi-cash"></i> Rs. 13,000 Cr Budget</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-2">
+          <div class="scheme-alert-card">
+            <div class="scheme-alert-header">
+              <div class="scheme-alert-badge" style="background: var(--success);">LAUNCHED</div>
+              <span class="scheme-alert-date"><i class="bi bi-calendar3"></i> July 5, 2026</span>
+            </div>
+            <h5>Startup India Seed Fund 2.0</h5>
+            <p>Up to Rs. 20 lakhs seed funding for DPIIT-recognized startups working on social impact solutions.</p>
+            <div class="scheme-alert-meta">
+              <span><i class="bi bi-rocket"></i> 10,000 Startups</span>
+              <span><i class="bi bi-cash"></i> Rs. 2,000 Cr Fund</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in delay-3">
+          <div class="scheme-alert-card">
+            <div class="scheme-alert-header">
+              <div class="scheme-alert-badge" style="background: var(--warning);">UPCOMING</div>
+              <span class="scheme-alert-date"><i class="bi bi-calendar3"></i> Starts: Aug 1, 2026</span>
+            </div>
+            <h5>National Green Hydrogen Mission</h5>
+            <p>Subsidies for green hydrogen production and infrastructure development across industrial corridors.</p>
+            <div class="scheme-alert-meta">
+              <span><i class="bi bi-tree"></i> 500+ Companies</span>
+              <span><i class="bi bi-cash"></i> Rs. 19,744 Cr</span>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm w-100 mt-3" disabled>Opens Aug 1</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Apply Guide -->
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-list-check"></i> Step by Step</span>
+        <h2>How to Apply for Any Scheme</h2>
+        <p>Follow these simple steps to apply for any government scheme on our platform.</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7 fade-in">
+          <div class="scheme-guide-steps">
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">1</div>
+              <div class="scheme-guide-step-content">
+                <h5>Create Your Account</h5>
+                <p>Sign up on Stackly using your Aadhaar number and mobile phone. Complete your profile with personal, income, and occupation details.</p>
+              </div>
+            </div>
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">2</div>
+              <div class="scheme-guide-step-content">
+                <h5>Check Eligibility</h5>
+                <p>Use our smart eligibility checker to find all schemes you qualify for based on your profile information.</p>
+              </div>
+            </div>
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">3</div>
+              <div class="scheme-guide-step-content">
+                <h5>Choose a Scheme</h5>
+                <p>Browse available schemes, read details, compare benefits, and select the one that best fits your needs.</p>
+              </div>
+            </div>
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">4</div>
+              <div class="scheme-guide-step-content">
+                <h5>Upload Documents</h5>
+                <p>Submit required documents digitally — Aadhaar, income certificate, caste certificate, bank details, etc.</p>
+              </div>
+            </div>
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">5</div>
+              <div class="scheme-guide-step-content">
+                <h5>Submit & Track</h5>
+                <p>Submit your application and track its status in real-time. Receive SMS and email updates at every stage.</p>
+              </div>
+            </div>
+            <div class="scheme-guide-step">
+              <div class="scheme-guide-step-num">6</div>
+              <div class="scheme-guide-step-content">
+                <h5>Receive Benefits</h5>
+                <p>Once approved, benefits are directly transferred to your bank account via DBT (Direct Benefit Transfer).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 fade-in delay-2">
+          <div class="scheme-guide-sidebar">
+            <div class="scheme-guide-sidebar-card">
+              <i class="bi bi-file-earmark-check" style="font-size:2.5rem; color: var(--primary);"></i>
+              <h5>Documents You'll Need</h5>
+              <ul class="scheme-guide-docs">
+                <li><i class="bi bi-check-circle-fill"></i> Aadhaar Card</li>
+                <li><i class="bi bi-check-circle-fill"></i> PAN Card</li>
+                <li><i class="bi bi-check-circle-fill"></i> Income Certificate</li>
+                <li><i class="bi bi-check-circle-fill"></i> Bank Passbook</li>
+                <li><i class="bi bi-check-circle-fill"></i> Passport Size Photo</li>
+                <li><i class="bi bi-check-circle-fill"></i> Caste Certificate (if applicable)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Disability Certificate (if applicable)</li>
+              </ul>
+              <a href="login.html" class="btn btn-primary btn-sm w-100 mt-2">Start Your Application</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stories -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-badge"><i class="bi bi-graph-up-arrow"></i> Real Impact</span>
+        <h2>Scheme Impact Stories</h2>
+        <p>See how government schemes have transformed the lives of real citizens across India.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 anim-zoom-in delay-1">
+          <div class="impact-story-card">
+            <div class="impact-story-avatar">
+              <img src="images/avatar_savita.webp" alt="Sunita Gameti">
+            </div>
+            <div class="impact-story-badge">PM-KISAN</div>
+            <h5>Sunita Gameti</h5>
+            <p class="impact-story-location"><i class="bi bi-geo-alt"></i> Rajasthan</p>
+            <p class="impact-story-text">"PM-KISAN gave my family Rs. 6,000 every year. I used it to buy better seeds and my farm yield increased by 40%. It changed our lives."</p>
+            <div class="impact-story-metrics">
+              <div>
+                <span class="impact-metric-num">40%</span>
+                <span class="impact-metric-label">Farm Yield ↑</span>
+              </div>
+              <div>
+                <span class="impact-metric-num">Rs. 18K</span>
+                <span class="impact-metric-label">Total Received</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 anim-zoom-in delay-2">
+          <div class="impact-story-card">
+            <div class="impact-story-avatar">
+              <img src="images/avatar_prem.webp" alt="Prakash Mehra">
+            </div>
+            <div class="impact-story-badge" style="background: var(--success);">Ayushman Bharat</div>
+            <h5>Prakash Mehra</h5>
+            <p class="impact-story-location"><i class="bi bi-geo-alt"></i> Uttar Pradesh</p>
+            <p class="impact-story-text">"My father's heart surgery costing Rs. 4.5 lakhs was fully covered under Ayushman Bharat. We didn't pay a single rupee. Thank you government."</p>
+            <div class="impact-story-metrics">
+              <div>
+                <span class="impact-metric-num">Rs. 4.5L</span>
+                <span class="impact-metric-label">Saved</span>
+              </div>
+              <div>
+                <span class="impact-metric-num">100%</span>
+                <span class="impact-metric-label">Coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 anim-zoom-in delay-3">
+          <div class="impact-story-card">
+            <div class="impact-story-avatar">
+              <img src="images/avatar_anil.webp" alt="Anita Devi">
+            </div>
+            <div class="impact-story-badge" style="background: var(--info);">PM Awas</div>
+            <h5>Anita Devi</h5>
+            <p class="impact-story-location"><i class="bi bi-geo-alt"></i> Madhya Pradesh</p>
+            <p class="impact-story-text">"For 15 years we lived in a kutcha house. Under PM Awas Yojana, we got a pucca house with water and electricity. My children now have a proper home."</p>
+            <div class="impact-story-metrics">
+              <div>
+                <span class="impact-metric-num">Rs. 2.5L</span>
+                <span class="impact-metric-label">Subsidy</span>
+              </div>
+              <div>
+                <span class="impact-metric-num">100%</span>
+                <span class="impact-metric-label">Family Happy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-padding section-bg">
     <div class="container">
       <div class="section-title fade-in">
@@ -234,18 +476,19 @@
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4">
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4"><img src="images/logo.webp" alt="Stackly" class="brand-logo-img"></a>
           <p style="font-size:0.9rem;max-width:280px;">A unified digital platform connecting citizens with government services. Making governance accessible, transparent, and efficient for everyone.</p>
           <div class="footer-social"><a href="404.html"><i class="bi bi-facebook"></i></a><a href="404.html"><i class="bi bi-twitter-x"></i></a><a href="404.html"><i class="bi bi-instagram"></i></a><a href="404.html"><i class="bi bi-linkedin"></i></a><a href="404.html"><i class="bi bi-youtube"></i></a></div>
         </div>
-        <div class="col-lg-3 col-md-6"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="news.html">News</a></li></ul></div>
-        <div class="col-lg-3 col-md-6"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Departments</h5><ul class="footer-links"><li><a href="departments.html">Identity & Documentation</a></li><li><a href="departments.html">Revenue & Taxation</a></li><li><a href="departments.html">Health & Welfare</a></li><li><a href="departments.html">Education</a></li><li><a href="departments.html">Housing & Urban Dev</a></li></ul></div>
+        <div class="col-lg col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li><li><a href="#">Feedback</a></li></ul></div>
+        <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div><div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div></div>
           <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-telephone"></i></div><div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@govconnect.gov.in</p></div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@stackly.gov.in</p></div></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 Stackly. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div></div></div></div>
