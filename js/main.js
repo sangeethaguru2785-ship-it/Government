@@ -5,19 +5,95 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---- Navbar Scroll Effect ----
+  // ---- Page Transitions & Loading Bar ----
+  // Inject top loading bar immediately
+  var loadBar = document.createElement('div');
+  loadBar.className = 'loading-bar';
+  document.body.appendChild(loadBar);
+  setTimeout(function() {
+    loadBar.style.width = '30%';
+  }, 10);
+
+  // Complete loading bar on window load
+  window.addEventListener('load', function() {
+    loadBar.style.width = '100%';
+    setTimeout(function() {
+      loadBar.style.opacity = '0';
+      setTimeout(function() {
+        loadBar.remove();
+      }, 400);
+    }, 200);
+  });
+
+  // Remove entry transition class
+  document.body.classList.remove('page-transition-in');
+
+  // Intercept navigation for smooth page exit transition
+  document.querySelectorAll('a').forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('javascript:') || link.getAttribute('target') === '_blank') {
+      return;
+    }
+    
+    // Check if this is an internal link (e.g., ends with .html, or is a relative link)
+    if (href.endsWith('.html') || (href.startsWith('/') && !href.startsWith('//')) || (!href.includes(':') && !href.includes('//'))) {
+      link.addEventListener('click', function (e) {
+        // Skip mailto and tel links
+        if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        
+        e.preventDefault();
+        
+        // Show loading progress bar starting exit sequence
+        var exitBar = document.createElement('div');
+        exitBar.className = 'loading-bar';
+        document.body.appendChild(exitBar);
+        setTimeout(function() {
+          exitBar.style.width = '70%';
+        }, 10);
+
+        document.body.classList.add('page-transition-out');
+        setTimeout(function () {
+          window.location.href = href;
+        }, 400); // Match CSS transition speed (0.4s)
+      });
+    }
+  });
+
+  // ---- Scroll Effects (Navbar & Parallax) ----
   const navbar = document.querySelector('.navbar');
-  function handleNavbarScroll() {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+  const pageHeaders = document.querySelectorAll('.page-header');
+  const heroVideo = document.querySelector('.hero-video');
+
+  function handleScrollEffects() {
+    var scrolled = window.scrollY;
+    
+    // Navbar scrolled class
+    if (navbar) {
+      if (scrolled > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+    
+    // Page header parallax
+    pageHeaders.forEach(function (header) {
+      var limit = header.offsetTop + header.offsetHeight;
+      if (scrolled <= limit) {
+        var yPos = scrolled * 0.18;
+        header.style.backgroundPositionY = 'calc(50% + ' + yPos + 'px)';
+      }
+    });
+    
+    // Hero video parallax
+    if (heroVideo && scrolled < 800) {
+      var yVideoPos = scrolled * 0.28;
+      heroVideo.style.transform = 'translateY(' + yVideoPos + 'px)';
     }
   }
-  if (navbar) {
-    window.addEventListener('scroll', handleNavbarScroll);
-    handleNavbarScroll();
-  }
+
+  window.addEventListener('scroll', handleScrollEffects);
+  handleScrollEffects();
 
   // ---- Active Nav Link ----
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -42,27 +118,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(function (el) {
+  document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .anim-fade, .anim-slide-up, .anim-zoom-in, .anim-slide-left, .anim-slide-right').forEach(function (el) {
     scrollObserver.observe(el);
   });
 
   // ---- Counter Animation ----
   function animateCounter(element, target, duration) {
-    duration = duration || 2000;
-    var start = 0;
-    var increment = target / (duration / 16);
+    duration = duration || 1600;
+    var startTime = null;
     var suffix = element.getAttribute('data-suffix') || '';
 
-    function updateCounter() {
-      start += increment;
-      if (start >= target) {
-        element.textContent = target.toLocaleString() + suffix;
-        return;
-      }
-      element.textContent = Math.floor(start).toLocaleString() + suffix;
-      requestAnimationFrame(updateCounter);
+    function easeOutQuad(t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
     }
-    updateCounter();
+
+    function updateCounter(currentTime) {
+      if (!startTime) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      
+      var progress = Math.min(timeElapsed, duration);
+      var value = easeOutQuad(progress, 0, target, duration);
+      
+      element.textContent = Math.floor(value).toLocaleString() + suffix;
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toLocaleString() + suffix;
+      }
+    }
+    requestAnimationFrame(updateCounter);
   }
 
   var counterObserver = new IntersectionObserver(function (entries) {
@@ -97,20 +183,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---- Back to Top ----
-  var backToTop = document.querySelector('.back-to-top');
-  if (backToTop) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 400) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  // ---- Scroll to Top Button ----
+  var scrollTopBtn = document.createElement('button');
+  scrollTopBtn.className = 'scroll-top-btn';
+  scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+  scrollTopBtn.setAttribute('title', 'Back to top');
+  scrollTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+  document.body.appendChild(scrollTopBtn);
+
+  function handleScrollTopBtn() {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
   }
+
+  window.addEventListener('scroll', handleScrollTopBtn);
+  handleScrollTopBtn();
+
+  scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   // ---- Sidebar Toggle (Dashboard) ----
   var sidebarToggle = document.querySelector('.toggle-sidebar');
@@ -231,12 +325,12 @@ document.addEventListener('DOMContentLoaded', function () {
           datasets: [{
             label: 'Applications',
             data: [65, 78, 90, 81, 96, 110, 120, 115, 130, 145, 155, 170],
-            borderColor: '#C5A55A',
-            backgroundColor: 'rgba(197,165,90,0.1)',
+            borderColor: '#2563EB',
+            backgroundColor: 'rgba(37,99,235,0.1)',
             fill: true,
             tension: 0.4,
             borderWidth: 2,
-            pointBackgroundColor: '#C5A55A',
+            pointBackgroundColor: '#2563EB',
             pointBorderColor: '#fff',
             pointBorderWidth: 2,
             pointRadius: 4,
@@ -244,12 +338,12 @@ document.addEventListener('DOMContentLoaded', function () {
           }, {
             label: 'Resolved',
             data: [50, 62, 75, 70, 85, 95, 105, 100, 118, 130, 140, 155],
-            borderColor: '#1E3A5F',
-            backgroundColor: 'rgba(30,58,95,0.1)',
+            borderColor: '#0F172A',
+            backgroundColor: 'rgba(15,23,42,0.1)',
             fill: true,
             tension: 0.4,
             borderWidth: 2,
-            pointBackgroundColor: '#1E3A5F',
+            pointBackgroundColor: '#0F172A',
             pointBorderColor: '#fff',
             pointBorderWidth: 2,
             pointRadius: 4,
@@ -279,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function () {
           labels: ['Identity Services', 'Revenue', 'Social Welfare', 'Health', 'Education', 'Other'],
           datasets: [{
             data: [30, 22, 18, 14, 10, 6],
-            backgroundColor: ['#C5A55A', '#1E3A5F', '#10B981', '#D4AF37', '#3B82F6', '#94A3B8'],
+            backgroundColor: ['#2563EB', '#0F172A', '#10B981', '#3B82F6', '#0EA5E9', '#94A3B8'],
             borderWidth: 0,
             hoverOffset: 8
           }]
@@ -305,12 +399,12 @@ document.addEventListener('DOMContentLoaded', function () {
           datasets: [{
             label: 'Processed',
             data: [85, 72, 90, 68, 78, 65],
-            backgroundColor: 'rgba(197,165,90,0.8)',
+            backgroundColor: 'rgba(37,99,235,0.8)',
             borderRadius: 6
           }, {
             label: 'Pending',
             data: [15, 28, 10, 32, 22, 35],
-            backgroundColor: 'rgba(30,58,95,0.5)',
+            backgroundColor: 'rgba(15,23,42,0.5)',
             borderRadius: 6
           }]
         },
@@ -337,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
           labels: ['Completed', 'In Progress', 'Pending', 'Rejected'],
           datasets: [{
             data: [45, 25, 20, 10],
-            backgroundColor: ['#10B981', '#3B82F6', '#D4AF37', '#EF4444'],
+            backgroundColor: ['#10B981', '#3B82F6', '#2563EB', '#EF4444'],
             borderWidth: 0,
             hoverOffset: 8
           }]
@@ -402,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function () {
       particle.style.left = Math.random() * 100 + '%';
       particle.style.animationDuration = (Math.random() * 12 + 8) + 's';
       particle.style.animationDelay = (Math.random() * 10) + 's';
-      var colors = ['rgba(197,165,90,0.5)', 'rgba(30,58,95,0.4)', 'rgba(16,185,129,0.4)', 'rgba(212,175,55,0.4)'];
+      var colors = ['rgba(37,99,235,0.5)', 'rgba(15,23,42,0.4)', 'rgba(16,185,129,0.4)', 'rgba(59,130,246,0.4)'];
       particle.style.background = colors[Math.floor(Math.random() * colors.length)];
       particleContainer.appendChild(particle);
     }
