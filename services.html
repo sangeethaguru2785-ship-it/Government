@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - Stackly</title>
   <link rel="icon" type="image/webp" href="images/logo.webp">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="page-transition-in">
+<body>
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -27,14 +31,14 @@
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-2">
-          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="404.html" class="btn btn-secondary btn-sm">Login</a>
           <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="page-header" style="background-image: url('images/bg_services.webp');">
+  <section class="page-header" style="background-image: url('images/Servicesbg.png');">
     <div class="container">
       <h1 class="hero-anim hero-anim-1">Our Services</h1>
       <nav aria-label="breadcrumb" class="hero-anim hero-anim-2">
@@ -78,171 +82,276 @@
         <!-- Identity Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="identity">
           <div class="service-card">
-            <div class="service-icon bg-primary-light"><i class="bi bi-person-badge"></i></div>
-            <h5>Aadhaar Card</h5>
-            <p>Apply for new Aadhaar card, update details, or download e-Aadhaar online.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/aadhaar.webp" alt="Aadhaar Card" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-primary-light">
+                <i class="bi bi-person-badge"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Aadhaar Card</h5>
+              <p>Apply for new Aadhaar card, update details, or download e-Aadhaar online.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="identity">
           <div class="service-card">
-            <div class="service-icon bg-primary-light"><i class="bi bi-credit-card"></i></div>
-            <h5>PAN Card</h5>
-            <p>Apply for new PAN card, corrections, or reprint your PAN card instantly.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 107</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/pan_card.webp" alt="PAN Card" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-primary-light">
+                <i class="bi bi-credit-card"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>PAN Card</h5>
+              <p>Apply for new PAN card, corrections, or reprint your PAN card instantly.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 107</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="identity">
           <div class="service-card">
-            <div class="service-icon bg-primary-light"><i class="bi bi-person-vcard"></i></div>
-            <h5>Voter ID Card</h5>
-            <p>Register as a new voter, update your voter ID, or download e-EPIC.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/voter_id.webp" alt="Voter ID Card" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-primary-light">
+                <i class="bi bi-person-vcard"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Voter ID Card</h5>
+              <p>Register as a new voter, update your voter ID, or download e-EPIC.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="identity">
           <div class="service-card">
-            <div class="service-icon bg-primary-light"><i class="bi bi-file-earmark-person"></i></div>
-            <h5>Caste Certificate</h5>
-            <p>Apply for SC/ST/OBC caste certificate for various official purposes.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/caste_cert.webp" alt="Caste Certificate" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-primary-light">
+                <i class="bi bi-file-earmark-person"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Caste Certificate</h5>
+              <p>Apply for SC/ST/OBC caste certificate for various official purposes.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Revenue Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="revenue">
           <div class="service-card">
-            <div class="service-icon bg-success-light"><i class="bi bi-cash-stack"></i></div>
-            <h5>Property Tax</h5>
-            <p>Pay your property tax online and download the receipt instantly.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Pay Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-info" style="font-size:0.7rem;">Online</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/property_tax.webp" alt="Property Tax" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-success-light">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Property Tax</h5>
+              <p>Pay your property tax online and download the receipt instantly.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Pay Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-info" style="font-size:0.7rem;">Online</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="revenue">
           <div class="service-card">
-            <div class="service-icon bg-success-light"><i class="bi bi-receipt"></i></div>
-            <h5>Income Certificate</h5>
-            <p>Apply for income certificate for scholarship, subsidy, or legal purposes.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/income_cert.webp" alt="Income Certificate" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-success-light">
+                <i class="bi bi-receipt"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Income Certificate</h5>
+              <p>Apply for income certificate for scholarship, subsidy, or legal purposes.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="revenue">
           <div class="service-card">
-            <div class="service-icon bg-success-light"><i class="bi bi-house-check"></i></div>
-            <h5>Land Records</h5>
-            <p>View land ownership records, mutation status, and land map details.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">View Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-info" style="font-size:0.7rem;">View</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/land_records.webp" alt="Land Records" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-success-light">
+                <i class="bi bi-house-check"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Land Records</h5>
+              <p>View land ownership records, mutation status, and land map details.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">View Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-info" style="font-size:0.7rem;">View</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Health Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="health">
           <div class="service-card">
-            <div class="service-icon bg-accent-light"><i class="bi bi-heart-pulse"></i></div>
-            <h5>Health Insurance</h5>
-            <p>Enroll in government health insurance schemes for your family.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Enroll Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/health_insurance.webp" alt="Health Insurance" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge" style="background: var(--white); border: 2.5px solid var(--white); color: var(--accent);">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Health Insurance</h5>
+              <p>Enroll in government health insurance schemes for your family.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Enroll Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="health">
           <div class="service-card">
-            <div class="service-icon bg-accent-light"><i class="bi bi-hospital"></i></div>
-            <h5>Hospital Registration</h5>
-            <p>Register at government hospitals and book OPD appointments online.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Sign Up Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/hospital_reg.webp" alt="Hospital Registration" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge" style="background: var(--white); border: 2.5px solid var(--white); color: var(--accent);">
+                <i class="bi bi-hospital"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Hospital Registration</h5>
+              <p>Register at government hospitals and book OPD appointments online.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Sign Up Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Education Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="education">
           <div class="service-card">
-            <div class="service-icon bg-warning-light"><i class="bi bi-mortarboard"></i></div>
-            <h5>Scholarship Portal</h5>
-            <p>Apply for government scholarships for pre-matric and post-matric students.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/scholarship.webp" alt="Scholarship Portal" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-warning-light">
+                <i class="bi bi-mortarboard"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Scholarship Portal</h5>
+              <p>Apply for government scholarships for pre-matric and post-matric students.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-success" style="font-size:0.7rem;">Free</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="education">
           <div class="service-card">
-            <div class="service-icon bg-warning-light"><i class="bi bi-patch-check"></i></div>
-            <h5>Degree Verification</h5>
-            <p>Verify your educational degree and download attested copies online.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Verify Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 50</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/degree_verify.webp" alt="Degree Verification" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-warning-light">
+                <i class="bi bi-patch-check"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Degree Verification</h5>
+              <p>Verify your educational degree and download attested copies online.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Verify Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 50</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Transport Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="transport">
           <div class="service-card">
-            <div class="service-icon bg-info-light"><i class="bi bi-car-front"></i></div>
-            <h5>Driving License</h5>
-            <p>Apply for new driving license or renewal of existing license online.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 200</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/driving_license.webp" alt="Driving License" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-info-light">
+                <i class="bi bi-car-front"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Driving License</h5>
+              <p>Apply for new driving license or renewal of existing license online.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-warning" style="font-size:0.7rem;">Rs. 200</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="transport">
           <div class="service-card">
-            <div class="service-icon bg-info-light"><i class="bi bi-truck"></i></div>
-            <h5>Vehicle Registration</h5>
-            <p>Register a new vehicle or transfer ownership of existing vehicle.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-warning" style="font-size:0.7rem;">Varies</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/vehicle_reg.webp" alt="Vehicle Registration" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-info-light">
+                <i class="bi bi-truck"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Vehicle Registration</h5>
+              <p>Register a new vehicle or transfer ownership of existing vehicle.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-warning" style="font-size:0.7rem;">Varies</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Housing Services -->
         <div class="col-lg-4 col-md-6 fade-in" data-category="housing">
           <div class="service-card">
-            <div class="service-icon bg-danger-light"><i class="bi bi-building"></i></div>
-            <h5>Building Permit</h5>
-            <p>Apply for building plan approval and construction permits online.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-info" style="font-size:0.7rem;">Online</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/building_permit.webp" alt="Building Permit" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-danger-light">
+                <i class="bi bi-building"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Building Permit</h5>
+              <p>Apply for building plan approval and construction permits online.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-info" style="font-size:0.7rem;">Online</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 fade-in" data-category="housing">
           <div class="service-card">
-            <div class="service-icon bg-danger-light"><i class="bi bi-key"></i></div>
-            <h5>Property Registration</h5>
-            <p>Register property sale deeds, gift deeds, and other property documents.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="login.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
-              <span class="badge bg-warning" style="font-size:0.7rem;">Varies</span>
+            <div class="service-card-image-wrapper">
+              <img src="images/services/property_reg.webp" alt="Property Registration" class="service-card-img" loading="lazy">
+              <div class="service-card-icon-badge bg-danger-light">
+                <i class="bi bi-key"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h5>Property Registration</h5>
+              <p>Register property sale deeds, gift deeds, and other property documents.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <a href="404.html" class="learn-more">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <span class="badge bg-warning" style="font-size:0.7rem;">Varies</span>
+              </div>
             </div>
           </div>
         </div>
@@ -318,7 +427,7 @@
                 <span><i class="bi bi-cash"></i> Free</span>
                 <span><i class="bi bi-building"></i> Food Dept.</span>
               </div>
-              <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+              <a href="404.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
             </div>
           </div>
         </div>
@@ -336,7 +445,7 @@
                 <span><i class="bi bi-cash"></i> Rs. 60</span>
                 <span><i class="bi bi-building"></i> Transport</span>
               </div>
-              <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
+              <a href="404.html" class="btn btn-primary btn-sm w-100 mt-3">Apply Now</a>
             </div>
           </div>
         </div>
@@ -418,7 +527,7 @@
               <div><span class="fw-bold">Free</span><br><small class="text-muted">Cost</small></div>
               <div><span class="fw-bold">99%</span><br><small class="text-muted">Success</small></div>
             </div>
-            <a href="login.html" class="btn btn-primary btn-sm w-100 mt-3">Start Application</a>
+            <a href="404.html" class="btn btn-primary btn-sm w-100 mt-3">Start Application</a>
           </div>
         </div>
       </div>
@@ -579,39 +688,43 @@
   </section>
 
   <!-- How It Works -->
-  <section class="section-padding section-bg">
+  <section class="section-padding section-bg hiw-section">
     <div class="container">
       <div class="section-title fade-in">
         <span class="section-badge"><i class="bi bi-lightning"></i> How It Works</span>
         <h2>Simple Steps to Get Started</h2>
       </div>
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6 fade-in delay-1">
-          <div class="text-center">
-            <div class="why-us-number mx-auto mb-3" style="font-size:1.4rem;">01</div>
-              <h5>Sign Up</h5>
-            <p class="text-muted" style="font-size:0.9rem;">Create your free citizen account with basic details and verify your identity.</p>
+      <div class="hiw-steps row g-4">
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="hiw-step">
+            <div class="hiw-step-icon"><i class="bi bi-person-plus"></i></div>
+            <div class="hiw-step-number">1</div>
+            <h5>Sign Up</h5>
+            <p>Create your free citizen account with basic details and verify your identity.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-2">
-          <div class="text-center">
-            <div class="why-us-number mx-auto mb-3" style="font-size:1.4rem;">02</div>
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="hiw-step">
+            <div class="hiw-step-icon"><i class="bi bi-search"></i></div>
+            <div class="hiw-step-number">2</div>
             <h5>Choose Service</h5>
-            <p class="text-muted" style="font-size:0.9rem;">Browse through available services and select the one you need.</p>
+            <p>Browse through available services and select the one you need.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-3">
-          <div class="text-center">
-            <div class="why-us-number mx-auto mb-3" style="font-size:1.4rem;">03</div>
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="hiw-step">
+            <div class="hiw-step-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+            <div class="hiw-step-number">3</div>
             <h5>Submit Documents</h5>
-            <p class="text-muted" style="font-size:0.9rem;">Upload required documents and fill in the application form online.</p>
+            <p>Upload required documents and fill in the application form online.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-4">
-          <div class="text-center">
-            <div class="why-us-number mx-auto mb-3" style="font-size:1.4rem;">04</div>
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="hiw-step">
+            <div class="hiw-step-icon"><i class="bi bi-check2-circle"></i></div>
+            <div class="hiw-step-number">4</div>
             <h5>Track & Receive</h5>
-            <p class="text-muted" style="font-size:0.9rem;">Track your application in real-time and receive documents digitally.</p>
+            <p>Track your application in real-time and receive documents digitally.</p>
           </div>
         </div>
       </div>
@@ -626,31 +739,81 @@
           <a href="index.html" class="d-flex align-items-center gap-2 mb-4">
             <img src="images/logo.webp" alt="Stackly" class="brand-logo-img">
           </a>
-          <p style="font-size:0.9rem;max-width:320px;">A unified digital platform connecting citizens with government services.</p>
+          <p style="font-size:0.9rem;max-width:280px;">A unified digital platform connecting citizens with government services. Making governance accessible, transparent, and efficient for everyone.</p>
           <div class="footer-social">
             <a href="404.html"><i class="bi bi-facebook"></i></a>
             <a href="404.html"><i class="bi bi-twitter-x"></i></a>
             <a href="404.html"><i class="bi bi-instagram"></i></a>
             <a href="404.html"><i class="bi bi-linkedin"></i></a>
+            <a href="404.html"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-        <div class="col-lg col-md-4"><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="departments.html">Departments</a></li><li><a href="schemes.html">Schemes</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-        <div class="col-lg col-md-4"><h5>Departments</h5><ul class="footer-links"><li><a href="departments.html">Identity & Documentation</a></li><li><a href="departments.html">Revenue & Taxation</a></li><li><a href="departments.html">Health & Welfare</a></li><li><a href="departments.html">Education</a></li><li><a href="departments.html">Housing & Urban Dev</a></li></ul></div>
-        <div class="col-lg col-md-4"><h5>Support</h5><ul class="footer-links"><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Help Center</a></li><li><a href="#">Grievance</a></li></ul></div>
+        <div class="col-lg col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="schemes.html">Schemes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg col-md-4">
+          <h5>Departments</h5>
+          <ul class="footer-links">
+            <li><a href="departments.html">Identity & Documentation</a></li>
+            <li><a href="departments.html">Revenue & Taxation</a></li>
+            <li><a href="departments.html">Health & Welfare</a></li>
+            <li><a href="departments.html">Education</a></li>
+            <li><a href="departments.html">Housing & Urban Dev</a></li>
+          </ul>
+        </div>
+        <div class="col-lg col-md-4">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="404.html">Help Center</a></li>
+            <li><a href="404.html">Grievance</a></li>
+            <li><a href="404.html">Feedback</a></li>
+          </ul>
+        </div>
         <div class="col-lg col-md-4">
           <h5>Contact Info</h5>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div><div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-telephone"></i></div><div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div></div>
-          <div class="footer-contact-item"><div class="footer-contact-icon"><i class="bi bi-envelope"></i></div><div class="footer-contact-text"><p>support@stackly.gov.in</p></div></div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div>
+            <div class="footer-contact-text"><p>Government Secretariat, New Delhi - 110001</p></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="bi bi-telephone"></i></div>
+            <div class="footer-contact-text"><p>1800-180-1551 (Toll Free)</p></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="bi bi-envelope"></i></div>
+            <div class="footer-contact-text"><p>support@stackly.gov.in</p></div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 Stackly. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div></div></div></div>
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p>&copy; 2026 Stackly. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links">
+              <a href="404.html">Privacy Policy</a>
+              <a href="404.html">Terms of Service</a>
+              <a href="404.html">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
   <button class="back-to-top"><i class="bi bi-arrow-up"></i></button>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script>
     // Service Filter
     document.querySelectorAll('.service-filter').forEach(function(btn) {
