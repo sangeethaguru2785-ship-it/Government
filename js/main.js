@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .anim-fade, .anim-slide-up, .anim-zoom-in, .anim-slide-left, .anim-slide-right').forEach(function (el) {
+  document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .anim-fade, .anim-slide-up, .anim-zoom-in, .anim-slide-left, .anim-slide-right, .anim-slide-down, .anim-zoom-out').forEach(function (el) {
     scrollObserver.observe(el);
   });
 
