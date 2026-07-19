@@ -52,28 +52,28 @@
   <section class="section-padding-sm" style="margin-top:-30px;position:relative;z-index:2;">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-3 col-md-6 fade-in delay-1">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-1">
           <div class="contact-info-card">
             <div class="contact-icon bg-primary-light"><i class="bi bi-geo-alt"></i></div>
             <h5>Visit Us</h5>
             <p>Government Secretariat, New Delhi - 110001</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-2">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-2">
           <div class="contact-info-card">
             <div class="contact-icon bg-success-light"><i class="bi bi-telephone"></i></div>
             <h5>Call Us</h5>
             <p>1800-180-1551 (Toll Free)<br>+91-11-2301-4567</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-3">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-3">
           <div class="contact-info-card">
             <div class="contact-icon bg-accent-light"><i class="bi bi-envelope"></i></div>
             <h5>Email Us</h5>
             <p>support@stackly.gov.in<br>info@stackly.gov.in</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-4">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-4">
           <div class="contact-info-card">
             <div class="contact-icon bg-warning-light"><i class="bi bi-clock"></i></div>
             <h5>Working Hours</h5>
@@ -91,7 +91,7 @@
         <div class="col-lg-8">
           <h3 class="mb-2">Send Us a Message</h3>
           <p class="text-muted mb-4">Have a question or need assistance? Fill out the form below and we'll get back to you within 24 hours.</p>
-          <div class="contact-form-wrapper">
+          <div class="contact-form-wrapper anim-zoom-in">
             <form>
               <div class="row g-3">
                 <div class="col-md-6">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Phone Number *</label>
-                  <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                  <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" data-validate="phone" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Subject *</label>
@@ -157,28 +157,28 @@
         <p>Multiple convenient ways to reach the Government Secretariat in New Delhi.</p>
       </div>
       <div class="row g-4 justify-content-center">
-        <div class="col-lg-3 col-md-6 fade-in delay-1">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-1">
           <div class="contact-direction-card">
             <div class="contact-direction-card-icon"><i class="bi bi-train-front"></i></div>
             <h5>By Metro</h5>
             <p>Central Secretariat Metro Station (Yellow Line) — 2 min walk to Gate No. 2</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-2">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-2">
           <div class="contact-direction-card">
             <div class="contact-direction-card-icon"><i class="bi bi-bus-front"></i></div>
             <h5>By Bus</h5>
             <p>Bus routes 103, 104, 520 — Secretariat Bus Stop, 1 min walk</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-3">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-3">
           <div class="contact-direction-card">
             <div class="contact-direction-card-icon"><i class="bi bi-car-front"></i></div>
             <h5>By Car</h5>
             <p>Visitor parking available at Gate No. 3 — Free for first 2 hours</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-4">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-4">
           <div class="contact-direction-card">
             <div class="contact-direction-card-icon"><i class="bi bi-geo-alt"></i></div>
             <h5>Address</h5>
@@ -198,7 +198,7 @@
         <p>Connect directly with the right department for faster resolution.</p>
       </div>
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6 fade-in delay-1">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-1">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--primary-ultra-light);color:var(--primary);"><i class="bi bi-person-badge"></i></div>
             <h5>Identity & Documentation</h5>
@@ -210,7 +210,7 @@
             <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 fade-in delay-2">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-2">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--success-light);color:var(--success);"><i class="bi bi-cash-stack"></i></div>
             <h5>Revenue & Taxation</h5>
@@ -222,7 +222,7 @@
             <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 fade-in delay-3">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-3">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--info-light);color:var(--info);"><i class="bi bi-heart-pulse"></i></div>
             <h5>Health & Welfare</h5>
@@ -234,7 +234,7 @@
             <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Sat, 8AM-8PM</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 fade-in delay-4">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-4">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--warning-light);color:var(--warning);"><i class="bi bi-mortarboard"></i></div>
             <h5>Education & Scholarships</h5>
@@ -246,7 +246,7 @@
             <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-5PM</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 fade-in delay-5">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-5">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--danger-light);color:var(--danger);"><i class="bi bi-house-gear"></i></div>
             <h5>Housing & Urban Dev</h5>
@@ -258,7 +258,7 @@
             <span class="dept-contact-hours"><i class="bi bi-clock"></i> Mon-Fri, 9AM-6PM</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 fade-in delay-6">
+        <div class="col-lg-4 col-md-6 anim-slide-left delay-6">
           <div class="dept-contact-card">
             <div class="dept-contact-icon" style="background:var(--primary-ultra-light);color:var(--secondary);"><i class="bi bi-headset"></i></div>
             <h5>Technical Support</h5>
@@ -283,7 +283,7 @@
         <p>Visit any of our regional offices across India for in-person assistance.</p>
       </div>
       <div class="row g-4">
-        <div class="col-lg-3 col-md-6 fade-in delay-1">
+        <div class="col-lg-3 col-md-6 anim-slide-right delay-1">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">North India</span>
@@ -296,7 +296,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-2">
+        <div class="col-lg-3 col-md-6 anim-slide-down delay-2">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">South India</span>
@@ -309,7 +309,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-3">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-3">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">West India</span>
@@ -322,7 +322,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-4">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-4">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">East India</span>
@@ -335,7 +335,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-5">
+        <div class="col-lg-3 col-md-6 anim-slide-right delay-5">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">Central India</span>
@@ -348,7 +348,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-6">
+        <div class="col-lg-3 col-md-6 anim-slide-down delay-6">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">Northeast India</span>
@@ -361,7 +361,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-7">
+        <div class="col-lg-3 col-md-6 anim-zoom-in delay-7">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">Northwest India</span>
@@ -374,7 +374,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 fade-in delay-8">
+        <div class="col-lg-3 col-md-6 anim-slide-up delay-8">
           <div class="regional-office-card">
             <div class="regional-office-header">
               <span class="regional-office-region">Southeast India</span>
@@ -401,7 +401,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="contact-faq-accordion fade-in" id="contactFaqAccordion">
+          <div class="contact-faq-accordion anim-slide-up" id="contactFaqAccordion">
             <div class="contact-faq-item">
               <div class="contact-faq-question" onclick="this.parentElement.classList.toggle('active')">
                 <span>What is the average response time for emails?</span>

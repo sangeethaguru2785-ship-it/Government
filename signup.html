@@ -384,14 +384,14 @@
               <label class="form-label">Phone Number *</label>
               <div class="input-group">
                 <span class="input-group-text">+91</span>
-                <input type="tel" class="form-control" placeholder="XXXXX XXXXX" required>
+                <input type="tel" class="form-control" placeholder="XXXXX XXXXX" data-validate="phone" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
               </div>
             </div>
             <div class="col-12">
               <label class="form-label">Aadhaar Number *</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
-                <input type="text" class="form-control" placeholder="XXXX XXXX XXXX" maxlength="14" required>
+                <input type="text" class="form-control" id="signupAadhaar" name="aadhaar" inputmode="numeric" pattern="\d{12}" placeholder="Enter 12-digit Aadhaar number" maxlength="12" required data-validate="aadhaar">
               </div>
             </div>
             <div class="col-12">

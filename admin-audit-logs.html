@@ -81,14 +81,18 @@
 
     <!-- Main Content -->
     <div class="dashboard-main">
-      <button class="dashboard-mobile-toggle" onclick="document.getElementById('sidebar').classList.toggle('show');document.getElementById('sidebarOverlay').classList.toggle('show');">
-        <i class="bi bi-list"></i>
-      </button>
-
       <div class="dashboard-content">
-        <div class="mb-4">
-          <h4 class="mb-1">Audit Logs</h4>
-          <p class="text-muted" style="font-size:0.9rem;">Track all system activity and user actions across the platform.</p>
+        <div class="dashboard-topbar">
+          <div class="d-flex align-items-center gap-3">
+            <button class="dashboard-mobile-toggle" onclick="document.getElementById('sidebar').classList.toggle('show');document.getElementById('sidebarOverlay').classList.toggle('show');">
+              <i class="bi bi-list"></i>
+            </button>
+            <div>
+              <h4 class="mb-1">Audit Logs</h4>
+              <p class="text-muted mb-0" style="font-size:0.9rem;">Track all system activity and user actions across the platform.</p>
+            </div>
+          </div>
+          <span></span>
         </div>
 
         <!-- Stats Row -->

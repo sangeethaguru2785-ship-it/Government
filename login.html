@@ -382,7 +382,7 @@
             <label class="form-label">Email or Aadhaar Number</label>
             <div class="input-group">
               <span class="input-group-text"><i class="bi bi-person"></i></span>
-              <input type="text" class="form-control" id="loginEmail" placeholder="Enter email or Aadhaar number" required>
+              <input type="text" class="form-control" id="loginEmail" placeholder="Enter email or Aadhaar number" required data-validate="email-or-aadhaar">
             </div>
           </div>
           <div class="mb-3">
@@ -391,6 +391,13 @@
               <span class="input-group-text"><i class="bi bi-lock"></i></span>
               <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required data-validate="password">
               <button class="btn btn-outline-secondary password-toggle" type="button"><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="password-requirements" id="loginPasswordRequirements">
+              <div class="pw-req" data-req="length"><i class="bi bi-circle"></i> At least 8 characters</div>
+              <div class="pw-req" data-req="upper"><i class="bi bi-circle"></i> One uppercase letter (A–Z)</div>
+              <div class="pw-req" data-req="lower"><i class="bi bi-circle"></i> One lowercase letter (a–z)</div>
+              <div class="pw-req" data-req="number"><i class="bi bi-circle"></i> One number (0–9)</div>
+              <div class="pw-req" data-req="special"><i class="bi bi-circle"></i> One special character (@#$%&*!)</div>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center mb-4">
@@ -445,6 +452,42 @@
       }
       var email = document.getElementById('loginEmail').value.trim();
       if (!email) return;
+      var EMAIL_RE = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      var AADHAAR_RE = /^\d{12}$/;
+      if (/@/.test(email)) {
+        if (!EMAIL_RE.test(email)) {
+          alert('Please enter a valid email address using only letters, numbers, @, and . (e.g., example@gmail.com).');
+          document.getElementById('loginEmail').focus();
+          return;
+        }
+      } else if (/^\d+$/.test(email)) {
+        if (!AADHAAR_RE.test(email)) {
+          alert('Aadhaar number must be exactly 12 digits.');
+          document.getElementById('loginEmail').focus();
+          return;
+        }
+      } else {
+        alert('Please enter a valid email address or 12-digit Aadhaar number.');
+        document.getElementById('loginEmail').focus();
+        return;
+      }
+      var pw = document.getElementById('loginPassword').value;
+      if (!pw) {
+        document.getElementById('loginPassword').focus();
+        return;
+      }
+      var pwChecks = { length: pw.length >= 8, upper: /[A-Z]/.test(pw), lower: /[a-z]/.test(pw), number: /[0-9]/.test(pw), special: /[@#$%&*!\^]/.test(pw) };
+      var pwMissing = [];
+      if (!pwChecks.length) pwMissing.push('at least 8 characters');
+      if (!pwChecks.upper) pwMissing.push('one uppercase letter');
+      if (!pwChecks.lower) pwMissing.push('one lowercase letter');
+      if (!pwChecks.number) pwMissing.push('one number');
+      if (!pwChecks.special) pwMissing.push('one special character');
+      if (pwMissing.length) {
+        alert('Password must contain ' + pwMissing.join(', ') + '.');
+        document.getElementById('loginPassword').focus();
+        return;
+      }
       var name = null;
       try {
         var registry = JSON.parse(localStorage.getItem('stackly_users')) || [];

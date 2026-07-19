@@ -92,13 +92,13 @@
 
       <div class="dashboard-content">
         <div class="mb-4">
-          <h4 class="mb-1">Welcome back, <span id="welcomeName">Admin</span>! <span style="font-size:1.5rem;">👋</span></h4>
-          <p class="text-muted" style="font-size:0.9rem;">Here's an overview of portal activity and performance metrics.</p>
+          <h4 class="mb-1 dashboard-welcome-heading">Welcome back, <span id="welcomeName">Admin</span>! <span class="dashboard-welcome-emoji">👋</span></h4>
+          <p class="text-muted dashboard-welcome-sub">Here's an overview of portal activity and performance metrics.</p>
         </div>
 
         <!-- Stats Row -->
-        <div class="row g-4 mb-4">
-          <div class="col-xl-3 col-md-6">
+        <div class="row g-3 g-md-4 mb-4">
+          <div class="col-xl-3 col-md-6 col-sm-6">
             <div class="stat-card">
               <div class="stat-card-header">
                 <div class="stat-card-icon bg-primary-light"><i class="bi bi-people"></i></div>
@@ -108,7 +108,7 @@
               <p>Total Citizens</p>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6 col-sm-6">
             <div class="stat-card">
               <div class="stat-card-header">
                 <div class="stat-card-icon bg-success-light"><i class="bi bi-file-earmark-check"></i></div>
@@ -118,7 +118,7 @@
               <p>Applications Processed</p>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6 col-sm-6">
             <div class="stat-card">
               <div class="stat-card-header">
                 <div class="stat-card-icon bg-warning-light"><i class="bi bi-hourglass-split"></i></div>
@@ -128,7 +128,7 @@
               <p>Pending Applications</p>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6 col-sm-6">
             <div class="stat-card">
               <div class="stat-card-header">
                 <div class="stat-card-icon bg-accent-light"><i class="bi bi-cash-stack"></i></div>
@@ -153,7 +153,7 @@
                   </select>
                 </div>
               </div>
-              <div class="chart-card-body" style="height:300px;">
+              <div class="chart-card-body chart-body-responsive">
                 <canvas id="lineChart"></canvas>
               </div>
             </div>
@@ -163,7 +163,7 @@
               <div class="chart-card-header">
                 <h5><i class="bi bi-pie-chart text-primary"></i> Ticket Status</h5>
               </div>
-              <div class="chart-card-body" style="height:300px;">
+              <div class="chart-card-body chart-body-responsive">
                 <canvas id="adminDoughnutChart"></canvas>
               </div>
             </div>
@@ -177,7 +177,7 @@
               <div class="chart-card-header">
                 <h5><i class="bi bi-bar-chart text-primary"></i> Department Performance</h5>
               </div>
-              <div class="chart-card-body" style="height:300px;">
+              <div class="chart-card-body chart-body-responsive">
                 <canvas id="barChart"></canvas>
               </div>
             </div>
