@@ -71,6 +71,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -80,6 +81,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 ::selection {
@@ -262,7 +265,7 @@ ul {
   left: 0;
   right: 0;
   padding: 16px 0;
-  transition: all var(--transition-normal);
+  transition: padding var(--transition-normal), background var(--transition-normal), backdrop-filter var(--transition-normal), -webkit-backdrop-filter var(--transition-normal), box-shadow var(--transition-normal);
   z-index: 1050;
   border: none;
   --navbar-height: 74px;
@@ -356,19 +359,61 @@ ul {
 }
 
 .navbar-toggler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 !important;
+  margin: 0 !important;
   border: none !important;
-  padding: 6px 8px !important;
-  font-size: 1.4rem !important;
+  border-radius: var(--radius-sm) !important;
+  background: transparent !important;
   color: var(--white) !important;
+  font-size: 1.6rem !important;
+  line-height: 1;
   outline: none !important;
   box-shadow: none !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 1060;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide toggler on desktop */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+.navbar-toggler .bi-list {
+  display: block !important;
+  font-size: 1.5rem !important;
+  line-height: 1;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rotate toggler icon and change to Close X when menu is expanded */
+.navbar-toggler[aria-expanded="true"] .bi-list {
+  transform: rotate(90deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .bi-list::before {
+  content: "\F62A" !important; /* Bootstrap Icon: bi-x */
 }
 
 .navbar.scrolled .navbar-toggler {
   color: var(--dark) !important;
 }
 
-.navbar-toggler:focus {
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+  outline: none !important;
   box-shadow: none !important;
 }
 
@@ -381,22 +426,64 @@ ul {
 }
 
 /* Mobile collapsed nav adjustments */
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .navbar {
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
   .navbar.scrolled {
     padding: 8px 0;
   }
 
+  .navbar-toggler {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .navbar > .container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .navbar-brand {
+    flex-shrink: 1;
+    margin-right: auto;
+  }
+
+  .navbar-brand .brand-logo-img {
+    height: 36px;
+  }
+
   .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background: var(--white);
-    border-radius: var(--radius-lg);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     padding: 20px;
-    margin-top: 12px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--gray-200);
+    margin: 0;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    z-index: 1055;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  .navbar-collapse:not(.show):not(.collapsing) {
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    display: block;
   }
 
   .navbar-collapse .nav-link {
@@ -435,11 +522,32 @@ ul {
   }
 }
 
+/* 768px and below */
+@media (max-width: 768px) {
+  .navbar-brand .brand-logo-img {
+    height: 34px;
+  }
+}
+
+/* 425px and below */
+@media (max-width: 425px) {
+  .navbar .d-flex.gap-2 .btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
 /* Extra small: tighter navbar buttons */
 @media (max-width: 400px) {
+  .navbar > .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .navbar .d-flex.gap-2 {
     flex-direction: column;
   }
+
   .navbar .d-flex.gap-2 .btn {
     flex: auto;
   }
@@ -3386,6 +3494,8 @@ ul {
 body {
   opacity: 1;
   transition: opacity 0.2s ease-out;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body.page-transition-out {

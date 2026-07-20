@@ -5,6 +5,25 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // ---- Safety: remove residual page-transition-out from bfcache ----
+  document.body.classList.remove('page-transition-out');
+
+  // ---- Safety: force hamburger visible on mobile, hidden on desktop ----
+  function ensureMobileTogglerVisible() {
+    var toggler = document.querySelector('.navbar-toggler');
+    if (!toggler) return;
+    if (window.innerWidth < 992) {
+      toggler.style.setProperty('display', 'inline-flex', 'important');
+      toggler.style.setProperty('visibility', 'visible', 'important');
+      toggler.style.setProperty('opacity', '1', 'important');
+    } else {
+      toggler.style.removeProperty('display');
+      toggler.style.removeProperty('visibility');
+      toggler.style.removeProperty('opacity');
+    }
+  }
+  ensureMobileTogglerVisible();
+
   // Intercept navigation for smooth exit transition (instant, no delay)
   document.querySelectorAll('a').forEach(function (link) {
     var href = link.getAttribute('href');
@@ -62,6 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   handleScrollEffects();
 
+  // ---- Re-check toggler visibility on resize ----
+  window.addEventListener('resize', function() {
+    ensureMobileTogglerVisible();
+  });
+
   // ---- Active Nav Link ----
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -70,6 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
       link.classList.add('active');
     }
   });
+
+  // ---- Mobile Navbar: close menu on link click ----
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+  var navbarToggler = document.querySelector('.navbar-toggler');
+  if (navbarCollapse && navbarToggler) {
+    function closeMobileMenu() {
+      if (navbarCollapse.classList.contains('show')) {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) { bsCollapse.hide(); }
+        }
+        navbarCollapse.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+      }
+    }
+    navbarCollapse.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.querySelectorAll('.navbar .d-flex.gap-2 .btn').forEach(function (btn) {
+      btn.addEventListener('click', closeMobileMenu);
+    });
+  }
 
   // ---- Scroll Animations ----
   const observerOptions = {
@@ -490,5 +536,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var rippleStyle = document.createElement('style');
   rippleStyle.textContent = '@keyframes ripple{to{transform:scale(4);opacity:0;}}';
   document.head.appendChild(rippleStyle);
+
+  // ---- Final safety: re-enforce toggler visibility after everything settles ----
+  ensureMobileTogglerVisible();
+  setTimeout(ensureMobileTogglerVisible, 100);
+  setTimeout(ensureMobileTogglerVisible, 500);
 
 });
